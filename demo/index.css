@@ -1,0 +1,9 @@
+.button {
+  background-color: var(--button-primary-bgColor-rest);
+  color: var(--button-primary-fgColor-rest);
+
+  border: var(--borderWidth-thin) solid var(--button-primary-borderColor-rest);
+
+  width: var(--control-medium-size);
+  padding: var(--control-small-paddingBlock) var(--control-small-paddingInline-condensed);
+}

@@ -1,0 +1,9 @@
+.component {
+  background-color: var(--control-checked-bgColor-rest);
+
+  color: var(--button-invisible-fgColor-rest);
+  border: var(--borderWidth-thin) solid var(--borderColor-emphasis);
+
+  width: var(--control-medium-size);
+  padding: var(--control-small-paddingBlock) var(--control-large-paddingInline-spacious);
+}
