@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="https://octodex.github.com/images/manufacturetocat.png" height="200px"/>
-  <br><br>
-  <b>VSCode extension for primer/primitives</b>
-  <br><br>
+  <img width="300px" src="https://user-images.githubusercontent.com/4608155/127241386-f11da52d-00d9-4366-b01c-6f4c1ebcf7f2.png">
+</p>
+
+<h3 align="center">VSCode extension for primer/primitives</h3>
+
+<p align="center">
   <img src="https://img.shields.io/badge/maturity-proof--of--concept-fae17d?style=flat-square"/>
 </p>
 
