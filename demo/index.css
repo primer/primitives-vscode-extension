@@ -4,6 +4,6 @@
 
   border: var(--borderWidth-thin) solid var(--button-primary-borderColor-rest);
 
-  width: var(--control-medium-size);
-  padding: var(--control-small-paddingBlock) var(--control-small-paddingInline-condensed);
+  width: var(--control-small-size);
+  padding: var(--control-small-paddingBlock) var(--control-small-paddingInline-normal);
 }

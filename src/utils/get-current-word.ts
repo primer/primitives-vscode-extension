@@ -1,4 +1,4 @@
-import { TextDocument } from "vscode-languageserver-textdocument";
+import { TextDocument } from 'vscode-languageserver-textdocument';
 
 export function getCurrentWord(document: TextDocument, offset: number): string {
   let left = offset - 1;
@@ -9,10 +9,7 @@ export function getCurrentWord(document: TextDocument, offset: number): string {
     left--;
   }
 
-  while (
-    right <= text.length &&
-    ' \t\n\r":{[()]},*>+'.indexOf(text.charAt(right)) === -1
-  ) {
+  while (right <= text.length && ' \t\n\r":{[()]},*>+'.indexOf(text.charAt(right)) === -1) {
     right++;
   }
 

@@ -57,7 +57,9 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
 
   try {
     ast = postcss.parse(currentLine);
-  } catch (error) {}
+  } catch (error) {
+    // do nothing
+  }
 
   if (!ast) return [];
 
@@ -70,7 +72,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
     try {
       // padding: block inline
       const value = currentLine.split(':')[1].trim();
-      const [blockValue, inlineValue] = value.split(' ');
+      const [blockValue] = value.split(' ');
       const blockValuePositionEnd = currentLine.indexOf(blockValue) + blockValue.length;
 
       if (params.position.character > blockValuePositionEnd) {
@@ -78,12 +80,14 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       } else if (params.position.character <= blockValuePositionEnd) {
         property = 'paddingBlock';
       }
-    } catch (error) {}
+    } catch (error) {
+      // do nothing
+    }
   } else if (property === 'border') {
     try {
       // border: width style color
       const value = currentLine.split(':')[1].trim();
-      const [borderWidth, borderStyle, borderColor] = value.split(' ');
+      const [borderWidth] = value.split(' ');
       const borderWidthPositionEnd = currentLine.indexOf(borderWidth) + borderWidth.length;
 
       if (params.position.character > borderWidthPositionEnd) {
@@ -91,7 +95,9 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       } else if (params.position.character <= borderWidthPositionEnd) {
         property = 'borderWidth';
       }
-    } catch (error) {}
+    } catch (error) {
+      // do nothing
+    }
   }
 
   let suggestedVariables;
@@ -129,10 +135,6 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       return { ...variable, sortText: `---z${indexToAlphabet(index)}` };
     })
   ];
-
-  const offset = doc.offsetAt(params.position);
-  const currentWord = getCurrentWord(doc, offset).slice(1);
-  console.log({ currentWord });
 
   const items = suggestedVariablesWithSortText.map((variable) => {
     const item: CompletionItem = {
@@ -222,10 +224,3 @@ documents.listen(connection);
 
 // Listen on the connection
 connection.listen();
-
-function getAllIndexes(arr, val) {
-  var indexes = [],
-    i;
-  for (i = 0; i < arr.length; i++) if (arr[i] === val) indexes.push(i);
-  return indexes;
-}
