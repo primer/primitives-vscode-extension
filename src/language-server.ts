@@ -11,7 +11,7 @@ import {
 } from 'vscode-languageserver/node';
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import postcss from 'postcss';
-import { properties, aliases, stories } from '@primer/primitives/tokens-next-private/js/intellisense';
+import { properties, aliases, stories } from '@primer/primitives/dist/js/intellisense';
 import camelCase from 'lodash.camelcase';
 import flatten from 'lodash.flatten';
 import { getCurrentWord } from './utils/get-current-word';

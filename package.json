@@ -26,7 +26,7 @@
     "deploy": "vsce publish"
   },
   "dependencies": {
-    "@primer/primitives": "^0.0.0-20230628151933",
+    "@primer/primitives": "^0.0.0-20240417150944",
     "lodash.camelcase": "^4.3.0",
     "lodash.flatten": "^4.4.0",
     "vscode-languageserver": "^8.1.0",
