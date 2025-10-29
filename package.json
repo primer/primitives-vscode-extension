@@ -25,6 +25,7 @@
     "package": "vsce package --pre-release",
     "deploy": "vsce publish"
   },
+  "prettier": "@github/prettier-config",
   "dependencies": {
     "@primer/primitives": "0.0.0-20240417150944",
     "lodash.camelcase": "^4.3.0",
