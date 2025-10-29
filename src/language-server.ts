@@ -11,9 +11,8 @@ import {
 } from 'vscode-languageserver/node'
 import {TextDocument} from 'vscode-languageserver-textdocument'
 import postcss from 'postcss'
-import {properties, stories} from '@primer/primitives/dist/js/intellisense'
+// import {properties, stories} from '@primer/primitives/dist/js/intellisense'
 import camelCase from 'lodash.camelcase'
-import flatten from 'lodash.flatten'
 import {getCurrentWord} from './utils/get-current-word'
 import {isColor} from './utils/is-color'
 import {getSuggestions} from './suggestions'
@@ -107,12 +106,14 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       label: variable.name,
       detail: variable.value,
       // using kind only for the icon
-      kind: isColor(variable.value)
-        ? CompletionItemKind.Color
-        : variable.type === 'functional'
-        ? CompletionItemKind.Field
-        : CompletionItemKind.Constructor,
-      sortText: variable.sortText,
+      kind:
+        typeof variable.value === 'string' && isColor(variable.value)
+          ? CompletionItemKind.Color
+          : variable.type === 'functional'
+          ? CompletionItemKind.Field
+          : CompletionItemKind.Constructor,
+      // sortText: variable.sortText
+      sortText: '---a',
       // this is slightly silly because what about multiple variables in one line
       // like shorthands or fallbacks
       insertText: currentLine.includes('var') ? variable.name : ` var(${variable.name});`,
@@ -129,17 +130,21 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
   // experimental, could be a bad idea
 
+  return null
+  // TODO: replace this with lookup from styleLint output
+
   // TODO: there's a bug here when base size is open
   // it doesn't switch back to others
-  if (stories[item.label]) {
-    connection.sendRequest('open-story', {
-      openPanelIfClosed: false,
-      variable: {name: item.label},
-      storyPath: stories[item.label],
-    })
-  }
 
-  return item
+  // if (stories[item.label]) {
+  //   connection.sendRequest('open-story', {
+  //     openPanelIfClosed: false,
+  //     variable: {name: item.label},
+  //     storyPath: stories[item.label],
+  //   })
+  // }
+
+  // return item
 })
 
 connection.onHover(params => {
@@ -150,7 +155,9 @@ connection.onHover(params => {
   const currentWord = getCurrentWord(doc, offset).slice(1)
   if (!currentWord) return null
 
-  const currentVariable = flatten(Object.values(properties)).find(variable => variable.name === currentWord)
+  const currentVariable = null
+  // TODO: replace this with lookup from styleLint output
+  // flatten(Object.values(properties)).find(variable => variable.name === currentWord)
 
   if (currentVariable) {
     // TODO: would be nice to put docs link here as well
@@ -175,10 +182,14 @@ connection.onDefinition(params => {
 
   const variableName = matches[0]
 
-  const found = flatten(Object.values(properties)).find(variable => variable.name === variableName)
+  const found = false
+  // TODO: replace this with lookup from styleLint output
+  // const found = flatten(Object.values(properties)).find(variable => variable.name === variableName)
   if (!found) return
 
-  const storyPath = stories[found.name]
+  const storyPath = null
+  // TODO: replace this with lookup from styleLint output
+  // stories[found.name]
 
   connection.sendRequest('open-story', {variable: found, storyPath})
   return null
