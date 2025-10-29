@@ -28,7 +28,7 @@
   },
   "prettier": "@github/prettier-config",
   "dependencies": {
-    "@primer/primitives": "0.0.0-20240417150944",
+    "@primer/primitives": "^11.2.1",
     "lodash.camelcase": "^4.3.0",
     "lodash.flatten": "^4.4.0",
     "vscode-languageserver": "^8.1.0",
