@@ -6,11 +6,10 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:github/recommended'],
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true, trailingComma: 'none', printWidth: 120 }],
-    'import/no-unresolved': ['error', { ignore: ['vscode'] }],
+    'import/no-unresolved': ['error', {ignore: ['vscode']}],
     // Overrides from updating plugin:github
     'filenames/match-regex': 'off',
     'import/no-commonjs': 'off',
-    'i18n-text/no-en': 'off'
-  }
-};
+    'i18n-text/no-en': 'off',
+  },
+}
