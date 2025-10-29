@@ -23,7 +23,8 @@
     "lint": "eslint ./src --ext .ts --fix",
     "package:prepublish": "npm run build",
     "package": "vsce package --pre-release",
-    "deploy": "vsce publish"
+    "deploy": "vsce publish",
+    "test": "vitest"
   },
   "prettier": "@github/prettier-config",
   "dependencies": {
@@ -45,6 +46,7 @@
     "eslint-plugin-github": "^4.8.0",
     "tsup": "^6.2.3",
     "typescript": "^4.8.2",
+    "vitest": "^4.0.4",
     "vsce": "^2.10.2",
     "vscode-languageclient": "^8.0.2"
   }
