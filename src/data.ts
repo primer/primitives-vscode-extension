@@ -54,65 +54,71 @@ export const data = {
 
 // TODO 1: make sure this mapping (and aliases) has all the properties we have opinions for
 // TODO 2: creating this map is very expensive on boot, we can probably cache the output of this
-export const propertiesMap: Partial<Record<keyof CSS.Properties, Suggestion[]>> = {
-  padding: data.size.filter(
-    variable =>
-      variable.kind === 'base' ||
-      (variable.kind === 'functional' &&
-        variable.name.includes('padding') &&
-        !variable.name.includes('paddingBlock') &&
-        !variable.name.includes('paddingInline')),
-  ),
-  paddingBlock: data.size.filter(
-    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('paddingBlock')),
-  ),
-  paddingInline: data.size.filter(
-    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('paddingInline')),
-  ),
-  margin: data.size.filter(
-    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('gap')),
-  ),
-  gap: data.size.filter(
-    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('gap')),
-  ),
 
-  width: data.size.filter(
-    variable =>
-      variable.kind === 'base' ||
-      (variable.kind === 'functional' && variable.name.includes('width')) ||
-      variable.name.includes('minTarget'),
-  ),
-  height: data.size.filter(
-    variable =>
-      variable.kind === 'base' ||
-      (variable.kind === 'functional' && variable.name.includes('height')) ||
-      variable.name.includes('size') ||
-      variable.name.includes('minTarget') ||
-      variable.name.includes('lineBoxHeight'),
-  ),
-
-  borderWidth: data.border.filter(variable => variable.name.includes('borderWidth')),
-  borderRadius: data.border.filter(variable => variable.name.includes('borderRadius')),
-  borderColor: data.colors.filter(variable => variable.name.includes('borderColor')),
-  boxShadow: data.border.filter(variable => variable.name.includes('boxShadow')),
-
-  outlineWidth: data.border.filter(variable => variable.name.includes('outline-focus-width')),
-  outlineOffset: data.border.filter(variable => variable.name.includes('outline-focus-offset')),
-  outlineColor: data.colors.filter(variable => variable.name.includes('outlineColor')),
-
-  fontWeight: data.typography.filter(variable => variable.name.includes('weight')),
-  fontSize: data.typography.filter(variable => variable.name.includes('size')),
-  lineHeight: data.typography.filter(variable => variable.name.includes('lineHeight')),
-  fontFamily: data.typography.filter(variable => variable.name.includes('fontStack')),
-  font: data.typography.filter(variable => variable.name.includes('shorthand')),
-
-  // question: should these 2 have the entire color scale as well?
-  color: data.colors.filter(variable => variable.name.includes('fgColor') || variable.name.includes('iconColor')),
-  backgroundColor: data.colors.filter(variable => variable.name.includes('bgColor')),
-
-  fill: data.colors.filter(variable => variable.name.includes('iconColor')),
-  stroke: data.colors.filter(variable => variable.name.includes('iconColor')),
+type Rule = {
+  data: Suggestion[]
+  match?: string[] // match if name contains any of these strings
+  exclude?: string[] // exclude if name contains any of these strings
 }
+
+const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
+  padding: [
+    {data: format(baseSize)},
+    {data: format(functionalSize), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
+  ],
+  paddingBlock: [{data: format(baseSize)}, {data: format(functionalSize), match: ['paddingBlock']}],
+  paddingInline: [{data: format(baseSize)}, {data: format(functionalSize), match: ['paddingInline']}],
+
+  gap: [{data: format(baseSize)}, {data: format(functionalSize), match: ['gap']}],
+  margin: [{data: format(baseSize)}, {data: format(functionalSize), match: ['gap']}],
+
+  width: [{data: format(baseSize)}, {data: format(functionalSize), match: ['width', 'minTarget']}],
+  height: [
+    {data: format(baseSize)},
+    {data: format(functionalSize), match: ['height', 'size', 'minTarget', 'lineBoxHeight']},
+  ],
+
+  borderWidth: [{data: format(functionalBorder), match: ['borderWidth']}],
+  borderRadius: [{data: format(functionalBorder), match: ['borderRadius']}],
+  borderColor: [{data: format(lightTheme), match: ['borderColor']}],
+  boxShadow: [{data: format(functionalBorder), match: ['boxShadow']}],
+
+  outlineWidth: [{data: format(functionalBorder), match: ['outline-focus-width']}],
+  outlineOffset: [{data: format(functionalBorder), match: ['outline-focus-offset']}],
+  outlineColor: [{data: format(lightTheme), match: ['outlineColor']}],
+
+  fontWeight: [{data: format(functionalTypography), match: ['weight']}],
+  fontSize: [{data: format(functionalTypography), match: ['size']}],
+  lineHeight: [{data: format(functionalTypography), match: ['lineHeight']}],
+  fontFamily: [{data: format(functionalTypography), match: ['fontStack']}],
+  font: [{data: format(functionalTypography), match: ['shorthand']}],
+
+  // question: should these 4 properties have the entire color scale as well?
+  color: [{data: format(lightTheme), match: ['fgColor', 'iconColor']}],
+  backgroundColor: [{data: format(lightTheme), match: ['bgColor']}],
+  fill: [{data: format(lightTheme), match: ['iconColor']}],
+  stroke: [{data: format(lightTheme), match: ['iconColor']}],
+}
+
+const propertiesMapFromRules: Partial<Record<keyof CSS.Properties, Suggestion[]>> = {}
+
+Object.entries(propertiesRules).map(([property, rules]) => {
+  propertiesMapFromRules[property as keyof CSS.Properties] = []
+
+  rules.map(rule => {
+    if (!rule.match && !rule.exclude) {
+      propertiesMapFromRules[property].push(...rule.data)
+    } else {
+      const filteredData = rule.data.filter(variable => {
+        const {match = [], exclude = []} = rule
+        return match.some(name => variable.name.includes(name)) && !exclude.some(name => variable.name.includes(name))
+      })
+      propertiesMapFromRules[property].push(...filteredData)
+    }
+  })
+})
+
+export const propertiesMap = propertiesMapFromRules
 
 export const aliases = {
   paddingBlockStart: 'paddingBlock',
