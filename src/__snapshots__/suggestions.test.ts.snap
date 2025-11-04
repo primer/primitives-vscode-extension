@@ -1,0 +1,335 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
+[
+  {
+    "kind": "functional",
+    "name": "--control-large-paddingBlock",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---aa",
+    "type": "dimension",
+    "value": "0.625rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--control-medium-paddingBlock",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ab",
+    "type": "dimension",
+    "value": "0.375rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--control-small-paddingBlock",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ac",
+    "type": "dimension",
+    "value": "0.015625rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--control-xlarge-paddingBlock",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ad",
+    "type": "dimension",
+    "value": "0.875rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--control-xsmall-paddingBlock",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ae",
+    "type": "dimension",
+    "value": "0.125rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--overlay-padding-condensed",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---af",
+    "type": "dimension",
+    "value": "0.03125rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--overlay-padding-normal",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ag",
+    "type": "dimension",
+    "value": "0.0625rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--overlay-paddingBlock-condensed",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ah",
+    "type": "dimension",
+    "value": "0.015625rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--overlay-paddingBlock-normal",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ai",
+    "type": "dimension",
+    "value": "0.046875rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--stack-padding-condensed",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---aj",
+    "type": "dimension",
+    "value": "0.03125rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--stack-padding-normal",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---ak",
+    "type": "dimension",
+    "value": "0.0625rem",
+  },
+  {
+    "kind": "functional",
+    "name": "--stack-padding-spacious",
+    "scopes": [
+      "gap",
+    ],
+    "sortText": "---al",
+    "type": "dimension",
+    "value": "0.09375rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-12",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---za",
+    "type": "dimension",
+    "value": "0.75rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-2",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zb",
+    "type": "dimension",
+    "value": "0.125rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-4",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zc",
+    "type": "dimension",
+    "value": "0.25rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-6",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zd",
+    "type": "dimension",
+    "value": "0.375rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-8",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---ze",
+    "type": "dimension",
+    "value": "0.5rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-16",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zf",
+    "type": "dimension",
+    "value": "1rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-20",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zg",
+    "type": "dimension",
+    "value": "1.25rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-24",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zh",
+    "type": "dimension",
+    "value": "1.5rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-28",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zi",
+    "type": "dimension",
+    "value": "1.75rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-32",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zj",
+    "type": "dimension",
+    "value": "2rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-36",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zk",
+    "type": "dimension",
+    "value": "2.25rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-40",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zl",
+    "type": "dimension",
+    "value": "2.5rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-44",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zm",
+    "type": "dimension",
+    "value": "2.75rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-48",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zn",
+    "type": "dimension",
+    "value": "3rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-64",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zo",
+    "type": "dimension",
+    "value": "4rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-80",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zp",
+    "type": "dimension",
+    "value": "5rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-96",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zq",
+    "type": "dimension",
+    "value": "6rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-112",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zr",
+    "type": "dimension",
+    "value": "7rem",
+  },
+  {
+    "kind": "base",
+    "name": "--base-size-128",
+    "scopes": [
+      "size",
+      "gap",
+    ],
+    "sortText": "---zs",
+    "type": "dimension",
+    "value": "8rem",
+  },
+]
+`;
