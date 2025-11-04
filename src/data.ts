@@ -18,7 +18,6 @@ export type Suggestion = {
   name: `--${string}`
   value: string
   kind: 'base' | 'functional'
-
   type: string
 }
 
@@ -46,12 +45,15 @@ export const data = {
   motion: format(baseMotion),
   typography: [...format(baseTypography), ...format(functionalTypography)],
   border: format(functionalBorder),
-  breakpoints: format(functionalBreakpoints), // not assigned yet because not applicable for property
-  viewport: format(functionalViewport), // not assigned yet because not applicable for property
+  breakpoints: format(functionalBreakpoints), // TODO: not used yet because it doesn't fit in propertiesMap
+  viewport: format(functionalViewport), // TODO: not used yet because it doesn't fit in propertiesMap
+
+  // TODO: this is potentitally an incomplete set because all variables do not exist in all themes?
   colors: format(lightTheme),
 }
 
-// some examples are here: https://github.com/primer/primitives/pull/664/files#diff-350cd9135045d377bae89fc386cc72c23a96d793e25a8462d00fa63aebecce2fR65
+// TODO 1: make sure this mapping (and aliases) has all the properties we have opinions for
+// TODO 2: creating this map is very expensive on boot, we can probably cache the output of this
 export const propertiesMap: Partial<Record<keyof CSS.Properties, Suggestion[]>> = {
   padding: data.size.filter(
     variable =>
@@ -104,7 +106,7 @@ export const propertiesMap: Partial<Record<keyof CSS.Properties, Suggestion[]>> 
   fontFamily: data.typography.filter(variable => variable.name.includes('fontStack')),
   font: data.typography.filter(variable => variable.name.includes('shorthand')),
 
-  // question: should these 2 have base as well?
+  // question: should these 2 have the entire color scale as well?
   color: data.colors.filter(variable => variable.name.includes('fgColor') || variable.name.includes('iconColor')),
   backgroundColor: data.colors.filter(variable => variable.name.includes('bgColor')),
 
