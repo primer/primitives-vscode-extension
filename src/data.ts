@@ -2,17 +2,21 @@
 import type * as CSS from 'csstype'
 
 import baseSize from '@primer/primitives/dist/styleLint/base/size/size.json'
-import baseMotion from '@primer/primitives/dist/styleLint/base/motion/motion.json'
-import baseTypography from '@primer/primitives/dist/styleLint/base/typography/typography.json'
-
-import functionalBorder from '@primer/primitives/dist/styleLint/functional/size/border.json'
-import functionalBreakpoints from '@primer/primitives/dist/styleLint/functional/size/breakpoints.json'
 import functionalSize from '@primer/primitives/dist/styleLint/functional/size/size.json'
 import functionalSizeCoarse from '@primer/primitives/dist/styleLint/functional/size/size-coarse.json'
 import functionalSizeFine from '@primer/primitives/dist/styleLint/functional/size/size-fine.json'
-import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
+
+import functionalBorder from '@primer/primitives/dist/styleLint/functional/size/border.json'
+
+import baseTypography from '@primer/primitives/dist/styleLint/base/typography/typography.json'
 import functionalTypography from '@primer/primitives/dist/styleLint/functional/typography/typography.json'
+
 import lightTheme from '@primer/primitives/dist/styleLint/functional/themes/light.json'
+import baseMotion from '@primer/primitives/dist/styleLint/base/motion/motion.json'
+
+// TODO: not used yet because it doesn't fit in propertiesMap
+import functionalBreakpoints from '@primer/primitives/dist/styleLint/functional/size/breakpoints.json'
+import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
 
 export type Suggestion = {
   name: `--${string}`
@@ -35,36 +39,19 @@ const format = (dataSubset: unknown): Suggestion[] => {
   })
 }
 
-export const data = {
-  size: [
-    ...format(baseSize),
-    ...format(functionalSize),
-    ...format(functionalSizeFine),
-    ...format(functionalSizeCoarse),
-  ],
-  motion: format(baseMotion),
-  typography: [...format(baseTypography), ...format(functionalTypography)],
-  border: format(functionalBorder),
-  breakpoints: format(functionalBreakpoints), // TODO: not used yet because it doesn't fit in propertiesMap
-  viewport: format(functionalViewport), // TODO: not used yet because it doesn't fit in propertiesMap
-
-  // TODO: this is potentitally an incomplete set because all variables do not exist in all themes?
-  colors: format(lightTheme),
-}
-
-// TODO 1: make sure this mapping (and aliases) has all the properties we have opinions for
-// TODO 2: creating this map is very expensive on boot, we can probably cache the output of this
-
 type Rule = {
   data: Suggestion[]
   match?: string[] // match if name contains any of these strings
   exclude?: string[] // exclude if name contains any of these strings
 }
 
+// TODO: make sure this mapping (and aliases) has all the properties we have opinions for
 const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   padding: [
     {data: format(baseSize)},
     {data: format(functionalSize), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
+    {data: format(functionalSizeFine), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
+    {data: format(functionalSizeCoarse), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
   ],
   paddingBlock: [{data: format(baseSize)}, {data: format(functionalSize), match: ['paddingBlock']}],
   paddingInline: [{data: format(baseSize)}, {data: format(functionalSize), match: ['paddingInline']}],
@@ -87,21 +74,30 @@ const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   outlineOffset: [{data: format(functionalBorder), match: ['outline-focus-offset']}],
   outlineColor: [{data: format(lightTheme), match: ['outlineColor']}],
 
-  fontWeight: [{data: format(functionalTypography), match: ['weight']}],
+  fontWeight: [
+    {data: format(baseTypography), match: ['weight']},
+    {data: format(functionalTypography), match: ['weight']},
+  ],
   fontSize: [{data: format(functionalTypography), match: ['size']}],
   lineHeight: [{data: format(functionalTypography), match: ['lineHeight']}],
   fontFamily: [{data: format(functionalTypography), match: ['fontStack']}],
   font: [{data: format(functionalTypography), match: ['shorthand']}],
 
   // question: should these 4 properties have the entire color scale as well?
+  // TODO: this is potentitally an incomplete set because all variables do not exist in all themes?
   color: [{data: format(lightTheme), match: ['fgColor', 'iconColor']}],
   backgroundColor: [{data: format(lightTheme), match: ['bgColor']}],
   fill: [{data: format(lightTheme), match: ['iconColor']}],
   stroke: [{data: format(lightTheme), match: ['iconColor']}],
+
+  transitionDuration: [{data: format(baseMotion), match: ['duration']}],
+  transitionTimingFunction: [{data: format(baseMotion), match: ['easing']}],
+  animationDuration: [{data: format(baseMotion), match: ['duration']}],
+  animationTimingFunction: [{data: format(baseMotion), match: ['easing']}],
 }
 
+// TODO: creating this map is very expensive on boot, we can probably cache the output of this
 const propertiesMapFromRules: Partial<Record<keyof CSS.Properties, Suggestion[]>> = {}
-
 Object.entries(propertiesRules).map(([property, rules]) => {
   propertiesMapFromRules[property as keyof CSS.Properties] = []
 
@@ -179,4 +175,6 @@ export const aliases = {
   background: 'backgroundColor',
   accentColor: ['backgroundColor', 'color'],
   caretColor: 'color',
+  transition: ['transitionDuration', 'transitionTimingFunction'],
+  animation: ['animationDuration', 'animationTimingFunction'],
 }
