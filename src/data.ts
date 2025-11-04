@@ -18,26 +18,19 @@ export type Suggestion = {
   name: `--${string}`
   value: string
   kind: 'base' | 'functional'
-  scopes: string[]
+
   type: string
 }
-
-const keysWithoutScope = []
 
 // TODO: should we type dataSubset?
 const format = (dataSubset: unknown): Suggestion[] => {
   return Object.keys(dataSubset).map(key => {
     const value = dataSubset[key]
 
-    // TODO: how do we know what to do with things without scopes?
-    const scope = value.$extensions?.['org.primer.figma']?.scopes ?? null
-    if (scope === null) keysWithoutScope.push(key)
-
     return {
       name: `--${key}`,
       value: value.$value[0],
       kind: value.filePath.includes('base') ? 'base' : 'functional',
-      scopes: scope || [],
       type: value.$type,
     }
   })
@@ -51,10 +44,10 @@ export const data = {
     ...format(functionalSizeCoarse),
   ],
   motion: format(baseMotion),
-  typography: [...format(baseTypography), ...format(functionalTypography)], // all tokens accounted for
-  border: format(functionalBorder), // all tokens accounted for
-  breakpoints: format(functionalBreakpoints),
-  viewport: format(functionalViewport),
+  typography: [...format(baseTypography), ...format(functionalTypography)],
+  border: format(functionalBorder),
+  breakpoints: format(functionalBreakpoints), // not assigned yet because not applicable for property
+  viewport: format(functionalViewport), // not assigned yet because not applicable for property
   colors: format(lightTheme),
 }
 
