@@ -51,8 +51,8 @@ export const data = {
     ...format(functionalSizeCoarse),
   ],
   motion: format(baseMotion),
-  typography: [...format(baseTypography), ...format(functionalTypography)],
-  border: format(functionalBorder),
+  typography: [...format(baseTypography), ...format(functionalTypography)], // all tokens accounted for
+  border: format(functionalBorder), // all tokens accounted for
   breakpoints: format(functionalBreakpoints),
   viewport: format(functionalViewport),
   colors: format(lightTheme),
@@ -60,16 +60,63 @@ export const data = {
 
 // some examples are here: https://github.com/primer/primitives/pull/664/files#diff-350cd9135045d377bae89fc386cc72c23a96d793e25a8462d00fa63aebecce2fR65
 export const propertiesMap: Partial<Record<keyof CSS.Properties, Suggestion[]>> = {
-  paddingBlock: data.size.filter(
+  padding: data.size.filter(
     variable =>
       variable.kind === 'base' ||
-      (variable.kind === 'functional' && variable.name.includes('padding') && !variable.name.includes('paddingInline')),
+      (variable.kind === 'functional' &&
+        variable.name.includes('padding') &&
+        !variable.name.includes('paddingBlock') &&
+        !variable.name.includes('paddingInline')),
+  ),
+  paddingBlock: data.size.filter(
+    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('paddingBlock')),
   ),
   paddingInline: data.size.filter(
+    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('paddingInline')),
+  ),
+  margin: data.size.filter(
+    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('gap')),
+  ),
+  gap: data.size.filter(
+    variable => variable.kind === 'base' || (variable.kind === 'functional' && variable.name.includes('gap')),
+  ),
+
+  width: data.size.filter(
     variable =>
       variable.kind === 'base' ||
-      (variable.kind === 'functional' && variable.name.includes('padding') && !variable.name.includes('paddingBlock')),
+      (variable.kind === 'functional' && variable.name.includes('width')) ||
+      variable.name.includes('minTarget'),
   ),
+  height: data.size.filter(
+    variable =>
+      variable.kind === 'base' ||
+      (variable.kind === 'functional' && variable.name.includes('height')) ||
+      variable.name.includes('size') ||
+      variable.name.includes('minTarget') ||
+      variable.name.includes('lineBoxHeight'),
+  ),
+
+  borderWidth: data.border.filter(variable => variable.name.includes('borderWidth')),
+  borderRadius: data.border.filter(variable => variable.name.includes('borderRadius')),
+  borderColor: data.colors.filter(variable => variable.name.includes('borderColor')),
+  boxShadow: data.border.filter(variable => variable.name.includes('boxShadow')),
+
+  outlineWidth: data.border.filter(variable => variable.name.includes('outline-focus-width')),
+  outlineOffset: data.border.filter(variable => variable.name.includes('outline-focus-offset')),
+  outlineColor: data.colors.filter(variable => variable.name.includes('outlineColor')),
+
+  fontWeight: data.typography.filter(variable => variable.name.includes('weight')),
+  fontSize: data.typography.filter(variable => variable.name.includes('size')),
+  lineHeight: data.typography.filter(variable => variable.name.includes('lineHeight')),
+  fontFamily: data.typography.filter(variable => variable.name.includes('fontStack')),
+  font: data.typography.filter(variable => variable.name.includes('shorthand')),
+
+  // question: should these 2 have base as well?
+  color: data.colors.filter(variable => variable.name.includes('fgColor') || variable.name.includes('iconColor')),
+  backgroundColor: data.colors.filter(variable => variable.name.includes('bgColor')),
+
+  fill: data.colors.filter(variable => variable.name.includes('iconColor')),
+  stroke: data.colors.filter(variable => variable.name.includes('iconColor')),
 }
 
 export const aliases = {
