@@ -84,7 +84,7 @@ const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   font: [{data: format(functionalTypography), match: ['shorthand']}],
 
   // question: should these 4 properties have the entire color scale as well?
-  // TODO: this is potentitally an incomplete set because all variables do not exist in all themes?
+  // TODO: this is potentially an incomplete set because all variables do not exist in all themes?
   color: [{data: format(lightTheme), match: ['fgColor', 'iconColor']}],
   backgroundColor: [{data: format(lightTheme), match: ['bgColor']}],
   fill: [{data: format(lightTheme), match: ['iconColor']}],
