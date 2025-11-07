@@ -46,7 +46,7 @@ type Rule = {
 }
 
 // TODO: make sure this mapping (and aliases) has all the properties we have opinions for
-const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
+export const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   padding: [
     {data: format(baseSize)},
     {data: format(functionalSize), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
@@ -93,87 +93,4 @@ const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   transitionTimingFunction: [{data: format(baseMotion), match: ['easing']}],
   animationDuration: [{data: format(baseMotion), match: ['duration']}],
   animationTimingFunction: [{data: format(baseMotion), match: ['easing']}],
-}
-
-// TODO: creating this map is very expensive on boot, we can probably cache the output of this
-const propertiesMapFromRules: Partial<Record<keyof CSS.Properties, Suggestion[]>> = {}
-Object.entries(propertiesRules).map(([property, rules]) => {
-  propertiesMapFromRules[property as keyof CSS.Properties] = []
-
-  rules.map(rule => {
-    if (!rule.match && !rule.exclude) {
-      propertiesMapFromRules[property].push(...rule.data)
-    } else {
-      const filteredData = rule.data.filter(variable => {
-        const {match = [], exclude = []} = rule
-        return match.some(name => variable.name.includes(name)) && !exclude.some(name => variable.name.includes(name))
-      })
-      propertiesMapFromRules[property].push(...filteredData)
-    }
-  })
-})
-
-export const propertiesMap = propertiesMapFromRules
-
-export const aliases = {
-  paddingBlockStart: 'paddingBlock',
-  paddingBlockEnd: 'paddingBlock',
-  paddingInlineEnd: 'paddingInline',
-  paddingInlineStart: 'paddingInline',
-  paddingTop: 'paddingBlock',
-  paddingBottom: 'paddingBlock',
-  paddingLeft: 'paddingInline',
-  paddingRight: 'paddingInline',
-  padding: ['paddingBlock', 'paddingInline'],
-  marginBlockStart: 'margin',
-  marginBlockEnd: 'margin',
-  marginInline: 'margin',
-  marginInlineEnd: 'margin',
-  marginInlineStart: 'margin',
-  marginTop: 'margin',
-  marginRight: 'margin',
-  marginBottom: 'margin',
-  marginLeft: 'margin',
-  maxWidth: 'width',
-  minWidth: 'width',
-  maxHeight: 'height',
-  minHeight: 'height',
-  rowGap: 'gap',
-  columnGap: 'gap',
-  borderTopWidth: 'borderWidth',
-  borderRightWidth: 'borderWidth',
-  borderLeftWidth: 'borderWidth',
-  borderBottomWidth: 'borderWidth',
-  borderBlockWidth: 'borderWidth',
-  borderInlineWidth: 'borderWidth',
-  borderBlockEndWidth: 'borderWidth',
-  borderBlockStartWidth: 'borderWidth',
-  borderInlineEndWidth: 'borderWidth',
-  borderInlineStartWidth: 'borderWidth',
-  borderBlock: 'border',
-  border: ['borderWidth', 'borderRadius', 'borderColor'],
-  borderTopColor: 'borderColor',
-  borderRightColor: 'borderColor',
-  borderLeftColor: 'borderColor',
-  borderBottomColor: 'borderColor',
-  borderBlockColor: 'borderColor',
-  borderInlineColor: 'borderColor',
-  borderBlockStartColor: 'borderColor',
-  borderBlockEndColor: 'borderColor',
-  borderInlineStartColor: 'borderColor',
-  borderInlineEndColor: 'borderColor',
-  borderTopLeftRadius: 'borderRadius',
-  borderTopRightRadius: 'borderRadius',
-  borderBottomRightRadius: 'borderRadius',
-  borderBottomLeftRadius: 'borderRadius',
-  borderStartStartRadius: 'borderRadius',
-  borderStartEndRadius: 'borderRadius',
-  borderEndEndRadius: 'borderRadius',
-  borderEndStartRadius: 'borderRadius',
-  outline: ['outlineWidth', 'outlineOffset', 'outlineColor'],
-  background: 'backgroundColor',
-  accentColor: ['backgroundColor', 'color'],
-  caretColor: 'color',
-  transition: ['transitionDuration', 'transitionTimingFunction'],
-  animation: ['animationDuration', 'animationTimingFunction'],
 }
