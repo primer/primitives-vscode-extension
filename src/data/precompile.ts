@@ -21,10 +21,15 @@ Object.entries(propertiesRules).map(([property, rules]) => {
   })
 })
 
+// eslint-disable-next-line no-undef
+const filePath = path.join(__dirname, './properties-generated.ts')
+// eslint-disable-next-line no-console, no-undef
+console.log('generated', filePath)
+
 fs.writeFileSync(
-  path.relative('.', './properties.ts'),
-  `
-    // Generated file, do not edit manually.
-    export const propertiesMap = ${JSON.stringify(propertiesMapFromRules, null, 2)}
+  filePath,
+  `// Generated file, do not edit manually. Run 'npm run precompile' to regenerate.
+
+export const propertiesMap = ${JSON.stringify(propertiesMapFromRules, null, 2)}
   `,
 )

@@ -18,13 +18,14 @@
   },
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsup src/index.ts src/language-server.ts --format cjs --external vscode --minify",
+    "build": "npm run precompile && tsup src/index.ts src/language-server.ts --format cjs --external vscode --minify",
     "clean": "rm -rf dist",
     "lint": "eslint ./src --ext .ts --fix",
     "package:prepublish": "npm run build",
     "package": "vsce package --pre-release",
     "deploy": "vsce publish",
-    "test": "vitest"
+    "test": "vitest",
+    "precompile": "npx ts-node src/data/precompile.ts"
   },
   "prettier": "@github/prettier-config",
   "dependencies": {
