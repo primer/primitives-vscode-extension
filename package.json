@@ -1,9 +1,9 @@
 {
-  "name": "primer-primitives-vscode-extension",
-  "version": "0.0.1",
-  "displayName": "VSCode extension for Primer primitives",
-  "description": "VSCode extension for Primer primitives",
-  "publisher": "siddharthkpgithub",
+  "name": "primer-primitives-autocomplete",
+  "version": "0.0.3",
+  "displayName": "Autocomplete for Primer Primitives",
+  "description": "Autocomplete for Primer Primitives",
+  "publisher": "githubprimer",
   "engines": {
     "vscode": "^1.79.0"
   },
@@ -23,7 +23,7 @@
     "lint": "eslint ./src --ext .ts --fix",
     "package:prepublish": "npm run build",
     "package": "vsce package --pre-release",
-    "deploy": "vsce publish",
+    "vsce:publish": "vsce publish",
     "test": "vitest",
     "precompile": "npx ts-node src/data/precompile.ts"
   },
