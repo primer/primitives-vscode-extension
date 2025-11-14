@@ -1,6 +1,13 @@
 // Generated file, do not edit manually. Run 'npm run precompile' to regenerate.
 
-export const propertiesMap = {
+export type Property = {
+  name: string
+  value?: string
+  kind: 'base' | 'functional'
+  type: string
+}
+
+export const propertiesMap: Record<string, Property[]> = {
   "padding": [
     {
       "name": "--base-size-112",
