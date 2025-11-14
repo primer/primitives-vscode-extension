@@ -13,5 +13,5 @@ export function getCurrentWord(document: TextDocument, offset: number): string {
     right++
   }
 
-  return text.substring(left, right)
+  return text.substring(left + 1, right)
 }
