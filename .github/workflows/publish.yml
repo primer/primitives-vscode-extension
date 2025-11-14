@@ -1,3 +1,4 @@
+# Read this first: https://github.com/primer/primitives-vscode-extension/blob/main/publishing.md
 name: Publish to VS Code Marketplace
 
 on:
