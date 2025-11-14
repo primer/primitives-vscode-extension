@@ -36,7 +36,7 @@ jobs:
         run: npm run package
         
       - name: Publish to VS Code Marketplace
-        run: npm run deploy
+        run: npm run vsce:publish
         env:
           # See publishing.md
           # Stored in https://github.com/primer/primitives-vscode-extension/settings/secrets/actions
