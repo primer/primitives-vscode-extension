@@ -1,5 +1,5 @@
 import flatten from 'lodash.flatten'
-import {propertiesMap, type Property} from '../data'
+import {propertiesMap, type Suggestion} from '../data'
 import lightTheme from '@primer/primitives/dist/styleLint/functional/themes/light.json'
 import darkTheme from '@primer/primitives/dist/styleLint/functional/themes/dark.json'
 import darkDimmedTheme from '@primer/primitives/dist/styleLint/functional/themes/dark-dimmed.json'
@@ -15,7 +15,7 @@ const allThemes = {
   'Light High Contrast': lightHighContrastTheme,
 }
 
-export type VariableInfo = Property & {
+export type VariableInfo = Suggestion & {
   themeValues?: Record<string, string>
 }
 
