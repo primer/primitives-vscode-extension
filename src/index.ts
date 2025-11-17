@@ -1,27 +1,27 @@
-import { join } from 'node:path';
-import { workspace, ExtensionContext, window, ViewColumn, WebviewPanel } from 'vscode';
-import { LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient/node';
+import {join} from 'node:path'
+import {workspace, ExtensionContext, window, ViewColumn, WebviewPanel} from 'vscode'
+import {LanguageClient, LanguageClientOptions, ServerOptions, TransportKind} from 'vscode-languageclient/node'
 
-let client: LanguageClient;
+let client: LanguageClient
 
 export function activate(context: ExtensionContext) {
   // we need to use dist version instead of source
-  const serverModule = context.asAbsolutePath(join('dist', 'language-server.js'));
+  const serverModule = context.asAbsolutePath(join('dist', 'language-server.js'))
 
   // The debug options for the server
   // --inspect=6009: runs the server in Node's Inspector mode so VS Code can attach to the server for debugging
-  const debugOptions = { execArgv: ['--nolazy', '--inspect=6011'] };
+  const debugOptions = {execArgv: ['--nolazy', '--inspect=6011']}
 
   // If the extension is launched in debug mode then the debug server options are used
   // Otherwise the run options are used
   const serverOptions: ServerOptions = {
-    run: { module: serverModule, transport: TransportKind.ipc },
+    run: {module: serverModule, transport: TransportKind.ipc},
     debug: {
       module: serverModule,
       transport: TransportKind.ipc,
-      options: debugOptions
-    }
-  };
+      options: debugOptions,
+    },
+  }
 
   // Options to control the language client
   const clientOptions: LanguageClientOptions = {
@@ -34,40 +34,40 @@ export function activate(context: ExtensionContext) {
       'onLanguage:javascript',
       'onLanguage:javascriptreact',
       'onLanguage:typescript',
-      'onLanguage:typescriptreact'
-    ].map((event) => ({
+      'onLanguage:typescriptreact',
+    ].map(event => ({
       scheme: 'file',
-      language: event.split(':')[1]
+      language: event.split(':')[1],
     })),
     synchronize: {
       fileEvents: [
         workspace.createFileSystemWatcher('**/*.css'),
         workspace.createFileSystemWatcher('**/*.scss'),
         workspace.createFileSystemWatcher('**/*.sass'),
-        workspace.createFileSystemWatcher('**/*.less')
-      ]
-    }
-  };
+        workspace.createFileSystemWatcher('**/*.less'),
+      ],
+    },
+  }
 
   // Create the language client and start the client.
-  client = new LanguageClient('primitives', 'primitives Language Server', serverOptions, clientOptions);
+  client = new LanguageClient('primitives', 'primitives Language Server', serverOptions, clientOptions)
 
   // Start the client. This will also launch the server
-  client.start();
+  client.start()
 
-  let panel: WebviewPanel;
+  let panel: WebviewPanel
 
-  client.onRequest('open-story', ({ variable, storyPath, openPanelIfClosed = true }) => {
+  client.onRequest('open-story', ({variable, storyPath, openPanelIfClosed = true}) => {
     if (!panel && openPanelIfClosed) {
       panel = window.createWebviewPanel('custom view type', 'Primer Primitives', ViewColumn.Beside, {
         enableScripts: true,
-        enableFindWidget: true
-      });
-      panel.onDidDispose(() => (panel = null));
+        enableFindWidget: true,
+      })
+      panel.onDidDispose(() => (panel = null))
     }
 
     if (panel) {
-      panel.title = variable.name;
+      panel.title = variable.name
 
       panel.webview.html = `
       <style>
@@ -97,14 +97,14 @@ export function activate(context: ExtensionContext) {
       
       <iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://primer.style/primitives/storybook/iframe.html?args=&id=${storyPath}&viewMode=story"></iframe>
     
-    `;
+    `
     }
-  });
+  })
 }
 
 export function deactivate() {
   if (!client) {
-    return undefined;
+    return undefined
   }
-  return client.stop();
+  return client.stop()
 }
