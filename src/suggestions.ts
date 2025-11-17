@@ -52,7 +52,11 @@ export const getSuggestions = (property: keyof CSS.Properties) => {
     ...baseVariables
       .sort((a, b) => {
         if (a.type === 'dimension' && b.type === 'dimension') {
-          return parseInt(a.value, 10) < parseInt(b.value, 10) ? -1 : 1
+          if (typeof a.value === 'number' && typeof b.value === 'number') {
+            return a.value < b.value ? -1 : 1
+          } else if (typeof a.value === 'string' && typeof b.value === 'string') {
+            return parseInt(a.value, 10) < parseInt(b.value, 10) ? -1 : 1
+          }
         } else return 0
       })
       .map((variable, index) => {

@@ -107,12 +107,12 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
   const items = suggestedVariablesWithSortText.map(variable => {
     const item: CompletionItem = {
       label: variable.name,
-      detail: variable.value,
+      detail: String(variable.value),
       // using kind only for the icon
       kind:
         typeof variable.value === 'string' && isColor(variable.value)
           ? CompletionItemKind.Color
-          : variable.type === 'functional'
+          : variable.kind === 'functional'
           ? CompletionItemKind.Field
           : CompletionItemKind.Constructor,
       // sortText: variable.sortText
