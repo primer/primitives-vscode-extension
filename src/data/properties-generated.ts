@@ -1,12 +1,20 @@
 // Generated file, do not edit manually. Run 'npm run precompile' to regenerate.
 
 // copy of type Suggestion from data/rules
-type Suggestion = {
-  name: `--${string}`
-  value: string | number
-  kind: 'base' | 'functional'
-  type: string
-}
+type Suggestion =
+  | {
+      name: `--${string}`
+      kind: 'base' | 'functional'
+    } & (
+      | {
+          value: string
+          type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration'
+        }
+      | {
+          value: number
+          type: 'fontWeight' | 'number' | 'cubicBezier'
+        }
+    )
 
 export const propertiesMap: Record<string, Suggestion[]> = {
   "padding": [

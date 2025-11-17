@@ -29,7 +29,7 @@ export function getVariableInfo(variableName: `--${string}`): VariableInfo | nul
 
   const info: VariableInfo = {...variable}
 
-  if (info.type === 'color' || (info.value && isColor(info.value))) {
+  if (info.type === 'color' || (typeof info.value === 'string' && isColor(info.value))) {
     info.themeValues = {}
 
     for (const [themeName, themeData] of Object.entries(allThemes)) {
