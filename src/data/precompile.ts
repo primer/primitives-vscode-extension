@@ -35,6 +35,7 @@ type Suggestion =
   | {
       name: \`--$\{string}\`
       kind: 'base' | 'functional'
+      docsUrl: string
     } & (
       | {
           value: string

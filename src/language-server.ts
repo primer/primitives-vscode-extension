@@ -18,7 +18,6 @@ import {isColor} from './utils/is-color'
 import {getSuggestions} from './suggestions'
 import {getCssVariable} from './utils/get-css-variable'
 import {getVariableInfo} from './utils/get-variable-info'
-import {getDocumentationLink} from './utils/get-documentation-link'
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -131,23 +130,14 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
 // This handler resolves additional information for the item selected in
 // the completion list.
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
-  // experimental, could be a bad idea
-
-  return null
-  // TODO: replace this with lookup from styleLint output
-
   // TODO: there's a bug here when base size is open
   // it doesn't switch back to others
+  const variableInfo = getVariableInfo(item.label as `--${string}`)
+  if (!variableInfo) return null
 
-  // if (stories[item.label]) {
-  //   connection.sendRequest('open-story', {
-  //     openPanelIfClosed: false,
-  //     variable: {name: item.label},
-  //     storyPath: stories[item.label],
-  //   })
-  // }
-
-  // return item
+  // TODO: this works but reloads the page every time!
+  // connection.sendRequest('open-docs', {variable: variableInfo})
+  return item
 })
 
 connection.onHover(params => {
@@ -160,7 +150,6 @@ connection.onHover(params => {
   if (!variableName) return null
 
   const variableInfo = getVariableInfo(variableName)
-
   if (!variableInfo) return null
 
   let markdown = `**\`${variableInfo.name}\`**\n\n`
@@ -179,9 +168,7 @@ connection.onHover(params => {
   }
 
   markdown += `\n---\n\n`
-
-  const docLink = getDocumentationLink(variableInfo.type)
-  markdown += `[View documentation](${docLink})\n`
+  markdown += `[View documentation](${variableInfo.docsUrl})\n`
 
   return {
     contents: {
@@ -196,26 +183,13 @@ connection.onDefinition(params => {
   if (!doc) return null
 
   const offset = doc.offsetAt(params.position)
-  const currentWord = getCurrentWord(doc, offset)
+  const variableName = getCssVariable(doc, offset)
+  if (!variableName) return null
 
-  if (!currentWord) return null
+  const variableInfo = getVariableInfo(variableName)
+  if (!variableInfo) return null
 
-  const regex = /(--[a-zA-Z0-9-]+)/g
-  const matches = currentWord.match(regex)
-  if (!matches) return null
-
-  const variableName = matches[0]
-
-  const found = false
-  // TODO: replace this with lookup from styleLint output
-  // const found = flatten(Object.values(properties)).find(variable => variable.name === variableName)
-  if (!found) return
-
-  const storyPath = null
-  // TODO: replace this with lookup from styleLint output
-  // stories[found.name]
-
-  connection.sendRequest('open-story', {variable: found, storyPath})
+  connection.sendRequest('open-docs', {variable: variableInfo})
   return null
 })
 
