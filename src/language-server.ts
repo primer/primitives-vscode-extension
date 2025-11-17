@@ -16,6 +16,9 @@ import camelCase from 'lodash.camelcase'
 import {getCurrentWord} from './utils/get-current-word'
 import {isColor} from './utils/is-color'
 import {getSuggestions} from './suggestions'
+import {getCssVariable} from './utils/get-css-variable'
+import {getVariableInfo} from './utils/get-variable-info'
+import {getDocumentationLink} from './utils/get-documentation-link'
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -152,19 +155,40 @@ connection.onHover(params => {
   if (!doc) return null
 
   const offset = doc.offsetAt(params.position)
-  const currentWord = getCurrentWord(doc, offset).slice(1)
-  if (!currentWord) return null
+  const variableName = getCssVariable(doc, offset)
 
-  const currentVariable = null
-  // TODO: replace this with lookup from styleLint output
-  // flatten(Object.values(properties)).find(variable => variable.name === currentWord)
+  if (!variableName) return null
 
-  if (currentVariable) {
-    // TODO: would be nice to put docs link here as well
-    return {contents: currentVariable.value} as Hover
+  const variableInfo = getVariableInfo(variableName)
+
+  if (!variableInfo) return null
+
+  let markdown = `**\`${variableInfo.name}\`**\n\n`
+  markdown += `\n---\n\n`
+
+  markdown += `- **Kind:** [${variableInfo.kind}](https://primer.style/product/primitives/token-names/#${variableInfo.kind})\n`
+  markdown += `- **Type:** ${variableInfo.type}\n`
+  markdown += `\n---\n\n`
+
+  if (variableInfo.themeValues && Object.keys(variableInfo.themeValues).length > 0) {
+    for (const [themeName, value] of Object.entries(variableInfo.themeValues)) {
+      markdown += `- **${themeName}:** \`${value}\`\n`
+    }
+  } else {
+    markdown += `**Value:** \`${variableInfo.value}\`\n\n`
   }
 
-  return null
+  markdown += `\n---\n\n`
+
+  const docLink = getDocumentationLink(variableInfo.type)
+  markdown += `[View documentation](${docLink})\n`
+
+  return {
+    contents: {
+      kind: 'markdown',
+      value: markdown,
+    },
+  } as Hover
 })
 
 connection.onDefinition(params => {
