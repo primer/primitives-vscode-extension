@@ -1,6 +1,14 @@
 // Generated file, do not edit manually. Run 'npm run precompile' to regenerate.
 
-export const propertiesMap: Record<string, Property[]> = {
+// copy of type Suggestion from data/rules
+type Suggestion = {
+  name: `--${string}`
+  value: string | number
+  kind: 'base' | 'functional'
+  type: string
+}
+
+export const propertiesMap: Record<string, Suggestion[]> = {
   "padding": [
     {
       "name": "--base-size-112",
@@ -1354,823 +1362,823 @@ export const propertiesMap: Record<string, Property[]> = {
   "borderColor": [
     {
       "name": "--avatar-borderColor",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-accent-emphasis",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-accent-muted",
-      "value": "#",
+      "value": "#54aeff66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-attention-emphasis",
-      "value": "#",
+      "value": "#9a6700",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-attention-muted",
-      "value": "#",
+      "value": "#d4a72c66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-closed-emphasis",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-closed-muted",
-      "value": "#",
+      "value": "#ff818266",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-danger-emphasis",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-danger-muted",
-      "value": "#",
+      "value": "#ff818266",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-default",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-disabled",
-      "value": "#",
+      "value": "#818b981a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-done-emphasis",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-done-muted",
-      "value": "#",
+      "value": "#c297ff66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-draft-emphasis",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-draft-muted",
-      "value": "#",
+      "value": "#d1d9e0b3",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-emphasis",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-muted",
-      "value": "#",
+      "value": "#d1d9e0b3",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-neutral-emphasis",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-neutral-muted",
-      "value": "#",
+      "value": "#d1d9e0b3",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-open-emphasis",
-      "value": "#",
+      "value": "#1a7f37",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-open-muted",
-      "value": "#",
+      "value": "#4ac26b66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-severe-emphasis",
-      "value": "#",
+      "value": "#bc4c00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-severe-muted",
-      "value": "#",
+      "value": "#fb8f4466",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-sponsors-emphasis",
-      "value": "#",
+      "value": "#bf3989",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-sponsors-muted",
-      "value": "#",
+      "value": "#ff80c866",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-success-emphasis",
-      "value": "#",
+      "value": "#1a7f37",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-success-muted",
-      "value": "#",
+      "value": "#4ac26b66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-translucent",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-transparent",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-upsell-emphasis",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--borderColor-upsell-muted",
-      "value": "#",
+      "value": "#c297ff66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-borderColor-active",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-borderColor-hover",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-borderColor-rest",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-borderColor-active",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-borderColor-disabled",
-      "value": "#",
+      "value": "#818b981a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-borderColor-hover",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-borderColor-rest",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-borderColor-disabled",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-borderColor-hover",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-borderColor-rest",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-borderColor-active",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-borderColor-hover",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-borderColor-active",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-borderColor-disabled",
-      "value": "#",
+      "value": "#95d8a6",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-borderColor-hover",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-borderColor-rest",
-      "value": "#",
+      "value": "#1f232826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-borderColor-0",
-      "value": "#",
+      "value": "#1f23280d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-borderColor-1",
-      "value": "#",
+      "value": "#1f23280d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-borderColor-2",
-      "value": "#",
+      "value": "#1f23280d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-borderColor-3",
-      "value": "#",
+      "value": "#1f23280d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-borderColor-4",
-      "value": "#",
+      "value": "#1f23280d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-borderColor-danger",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-borderColor-disabled",
-      "value": "#",
+      "value": "#818b981a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-borderColor-emphasis",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-borderColor-rest",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-borderColor-selected",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-borderColor-success",
-      "value": "#",
+      "value": "#1a7f37",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-borderColor-warning",
-      "value": "#",
+      "value": "#9a6700",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-borderColor-active",
-      "value": "#",
+      "value": "#0757ba",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-borderColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-borderColor-hover",
-      "value": "#",
+      "value": "#0860ca",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-borderColor-rest",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-borderColor-active",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-borderColor-hover",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-borderColor-rest",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlKnob-borderColor-checked",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlKnob-borderColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlKnob-borderColor-rest",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-borderColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-borderColor-rest",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--counter-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-auburn-borderColor-emphasis",
-      "value": "#",
+      "value": "#9d615c",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-auburn-borderColor-muted",
-      "value": "#",
+      "value": "#e6d6d5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-blue-borderColor-emphasis",
-      "value": "#",
+      "value": "#006edb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-blue-borderColor-muted",
-      "value": "#",
+      "value": "#ade1ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-brown-borderColor-emphasis",
-      "value": "#",
+      "value": "#856d4c",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-brown-borderColor-muted",
-      "value": "#",
+      "value": "#dfd7c8",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-coral-borderColor-emphasis",
-      "value": "#",
+      "value": "#d43511",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-coral-borderColor-muted",
-      "value": "#",
+      "value": "#fecebe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-cyan-borderColor-emphasis",
-      "value": "#",
+      "value": "#007b94",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-cyan-borderColor-muted",
-      "value": "#",
+      "value": "#7ae9ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-gray-borderColor-emphasis",
-      "value": "#",
+      "value": "#647182",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-gray-borderColor-muted",
-      "value": "#",
+      "value": "#d2dae4",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-green-borderColor-emphasis",
-      "value": "#",
+      "value": "#2c8141",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-green-borderColor-muted",
-      "value": "#",
+      "value": "#9ceda0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-indigo-borderColor-emphasis",
-      "value": "#",
+      "value": "#5a61e7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-indigo-borderColor-muted",
-      "value": "#",
+      "value": "#d2d7fe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lemon-borderColor-emphasis",
-      "value": "#",
+      "value": "#866e04",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lemon-borderColor-muted",
-      "value": "#",
+      "value": "#f0db3d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lime-borderColor-emphasis",
-      "value": "#",
+      "value": "#527a29",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lime-borderColor-muted",
-      "value": "#",
+      "value": "#c7e580",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-olive-borderColor-emphasis",
-      "value": "#",
+      "value": "#64762d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-olive-borderColor-muted",
-      "value": "#",
+      "value": "#dbe170",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-orange-borderColor-emphasis",
-      "value": "#",
+      "value": "#b8500f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-orange-borderColor-muted",
-      "value": "#",
+      "value": "#fecfaa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pine-borderColor-emphasis",
-      "value": "#",
+      "value": "#167e53",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pine-borderColor-muted",
-      "value": "#",
+      "value": "#80efb9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pink-borderColor-emphasis",
-      "value": "#",
+      "value": "#ce2c85",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pink-borderColor-muted",
-      "value": "#",
+      "value": "#fdc9e2",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-plum-borderColor-emphasis",
-      "value": "#",
+      "value": "#a830e8",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-plum-borderColor-muted",
-      "value": "#",
+      "value": "#f0cdfe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-purple-borderColor-emphasis",
-      "value": "#",
+      "value": "#894ceb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-purple-borderColor-muted",
-      "value": "#",
+      "value": "#e6d2fe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-red-borderColor-emphasis",
-      "value": "#",
+      "value": "#df0c24",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-red-borderColor-muted",
-      "value": "#",
+      "value": "#fecdcd",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-teal-borderColor-emphasis",
-      "value": "#",
+      "value": "#127e81",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-teal-borderColor-muted",
-      "value": "#",
+      "value": "#89ebe1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-yellow-borderColor-emphasis",
-      "value": "#",
+      "value": "#946a00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-yellow-borderColor-muted",
-      "value": "#",
+      "value": "#ffd642",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--header-borderColor-divider",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--headerSearch-borderColor",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-auburn-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-blue-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-brown-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-coral-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-cyan-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-gray-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-green-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-indigo-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lemon-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lime-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-olive-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-orange-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pine-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pink-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-plum-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-purple-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-red-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-teal-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-yellow-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--overlay-borderColor",
-      "value": "#",
+      "value": "#d1d9e080",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-track-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--selectMenu-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--topicTag-borderColor",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--underlineNav-borderColor-active",
-      "value": "#",
+      "value": "#fd8c73",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--underlineNav-borderColor-hover",
-      "value": "#",
+      "value": "#d1d9e0b3",
       "kind": "functional",
       "type": "color"
     }
@@ -2178,19 +2186,19 @@ export const propertiesMap: Record<string, Property[]> = {
   "boxShadow": [
     {
       "name": "--boxShadow-thick",
-      "value": "i",
+      "value": "inset 0 0 0 0.125rem,2px",
       "kind": "functional",
       "type": "string"
     },
     {
       "name": "--boxShadow-thicker",
-      "value": "i",
+      "value": "inset 0 0 0 0.25rem,4px",
       "kind": "functional",
       "type": "string"
     },
     {
       "name": "--boxShadow-thin",
-      "value": "i",
+      "value": "inset 0 0 0 0.0625rem,1px",
       "kind": "functional",
       "type": "string"
     }
@@ -2214,7 +2222,7 @@ export const propertiesMap: Record<string, Property[]> = {
   "outlineColor": [
     {
       "name": "--focus-outlineColor",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     }
@@ -2222,66 +2230,79 @@ export const propertiesMap: Record<string, Property[]> = {
   "fontWeight": [
     {
       "name": "--base-text-weight-light",
+      "value": 300,
       "kind": "base",
       "type": "fontWeight"
     },
     {
       "name": "--base-text-weight-medium",
+      "value": 500,
       "kind": "base",
       "type": "fontWeight"
     },
     {
       "name": "--base-text-weight-normal",
+      "value": 400,
       "kind": "base",
       "type": "fontWeight"
     },
     {
       "name": "--base-text-weight-semibold",
+      "value": 600,
       "kind": "base",
       "type": "fontWeight"
     },
     {
       "name": "--text-body-weight",
+      "value": 400,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-caption-weight",
+      "value": 400,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-codeBlock-weight",
+      "value": 400,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-codeInline-weight",
+      "value": 400,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-display-weight",
+      "value": 500,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-subtitle-weight",
+      "value": 400,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-title-weight-large",
+      "value": 600,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-title-weight-medium",
+      "value": 600,
       "kind": "functional",
       "type": "fontWeight"
     },
     {
       "name": "--text-title-weight-small",
+      "value": 600,
       "kind": "functional",
       "type": "fontWeight"
     }
@@ -2357,51 +2378,61 @@ export const propertiesMap: Record<string, Property[]> = {
   "lineHeight": [
     {
       "name": "--text-body-lineHeight-large",
+      "value": 1.5,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-body-lineHeight-medium",
+      "value": 1.4285,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-body-lineHeight-small",
+      "value": 1.6666,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-caption-lineHeight",
+      "value": 1.3333,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-codeBlock-lineHeight",
+      "value": 1.5385,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-display-lineHeight",
+      "value": 1.4,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-subtitle-lineHeight",
+      "value": 1.6,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-title-lineHeight-large",
+      "value": 1.5,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-title-lineHeight-medium",
+      "value": 1.6,
       "kind": "functional",
       "type": "number"
     },
     {
       "name": "--text-title-lineHeight-small",
+      "value": 1.5,
       "kind": "functional",
       "type": "number"
     }
@@ -2409,25 +2440,25 @@ export const propertiesMap: Record<string, Property[]> = {
   "fontFamily": [
     {
       "name": "--fontStack-monospace",
-      "value": "u",
+      "value": "ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace",
       "kind": "functional",
       "type": "fontFamily"
     },
     {
       "name": "--fontStack-sansSerif",
-      "value": "-",
+      "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "fontFamily"
     },
     {
       "name": "--fontStack-sansSerifDisplay",
-      "value": "-",
+      "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "fontFamily"
     },
     {
       "name": "--fontStack-system",
-      "value": "-",
+      "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "fontFamily"
     }
@@ -2435,67 +2466,67 @@ export const propertiesMap: Record<string, Property[]> = {
   "font": [
     {
       "name": "--text-body-shorthand-large",
-      "value": "4",
+      "value": "400 1rem,16px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-body-shorthand-medium",
-      "value": "4",
+      "value": "400 0.875rem,14px/1.4285 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-body-shorthand-small",
-      "value": "4",
+      "value": "400 0.75rem,12px/1.6666 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-caption-shorthand",
-      "value": "4",
+      "value": "400 0.75rem,12px/1.3333 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-codeBlock-shorthand",
-      "value": "4",
+      "value": "400 0.8125rem,13px/1.5385 ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-codeInline-shorthand",
-      "value": "4",
+      "value": "400 ,14.856px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-display-shorthand",
-      "value": "5",
+      "value": "500 2.5rem,40px/1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-subtitle-shorthand",
-      "value": "4",
+      "value": "400 1.25rem,20px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-title-shorthand-large",
-      "value": "6",
+      "value": "600 2rem,32px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-title-shorthand-medium",
-      "value": "6",
+      "value": "600 1.25rem,20px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     },
     {
       "name": "--text-title-shorthand-small",
-      "value": "6",
+      "value": "600 1rem,16px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography"
     }
@@ -2503,997 +2534,997 @@ export const propertiesMap: Record<string, Property[]> = {
   "color": [
     {
       "name": "--button-danger-fgColor-active",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-fgColor-disabled",
-      "value": "#",
+      "value": "#d1242f80",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-fgColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-fgColor-rest",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-iconColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-iconColor-rest",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-fgColor-rest",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-inactive-fgColor",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-fgColor-active",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-fgColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-fgColor-hover",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-fgColor-rest",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-hover",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-fgColor-active",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-fgColor-disabled",
-      "value": "#",
+      "value": "#0969da80",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-fgColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-fgColor-rest",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-fgColor-disabled",
-      "value": "#",
+      "value": "#ffffffcc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-fgColor-rest",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-iconColor-rest",
-      "value": "#",
+      "value": "#ffffffcc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-star-iconColor",
-      "value": "#",
+      "value": "#eac54f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-danger-fgColor-disabled",
-      "value": "#",
+      "value": "#d1242f80",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-danger-fgColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-danger-fgColor-rest",
-      "value": "#",
+      "value": "#c21c2c",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-outline-fgColor-disabled",
-      "value": "#",
+      "value": "#0969da80",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-outline-fgColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-outline-fgColor-rest",
-      "value": "#",
+      "value": "#0550ae",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-cursor-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-gutterMarker-fgColor-default",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-gutterMarker-fgColor-muted",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-lineNumber-fgColor",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-matchingBracket-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-comment",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-constant",
-      "value": "#",
+      "value": "#0550ae",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-entity",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-keyword",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-storage",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-string",
-      "value": "#",
+      "value": "#0a3069",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-support",
-      "value": "#",
+      "value": "#0550ae",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-syntax-fgColor-variable",
-      "value": "#",
+      "value": "#953800",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-fgColor-disabled",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-fgColor-rest",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-danger-fgColor-hover",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-danger-fgColor-rest",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-fgColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-fgColor-placeholder",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-fgColor-rest",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-fgColor-disabled",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-fgColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-additionLine-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-additionNum-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-additionWord-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-deletionLine-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-deletionNum-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-deletionWord-fgColor",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-expander-iconColor",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-hunkLine-fgColor",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-hunkNum-fgColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-hunkNum-fgColor-rest",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-auburn-fgColor",
-      "value": "#",
+      "value": "#8a5551",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-blue-fgColor",
-      "value": "#",
+      "value": "#005fcc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-brown-fgColor",
-      "value": "#",
+      "value": "#755f43",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-coral-fgColor",
-      "value": "#",
+      "value": "#ba2e12",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-cyan-fgColor",
-      "value": "#",
+      "value": "#006a80",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-gray-fgColor",
-      "value": "#",
+      "value": "#5c6570",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-green-fgColor",
-      "value": "#",
+      "value": "#2b6e3f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-indigo-fgColor",
-      "value": "#",
+      "value": "#494edf",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lemon-fgColor",
-      "value": "#",
+      "value": "#786002",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lime-fgColor",
-      "value": "#",
+      "value": "#476c28",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-olive-fgColor",
-      "value": "#",
+      "value": "#56682c",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-orange-fgColor",
-      "value": "#",
+      "value": "#a24610",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pine-fgColor",
-      "value": "#",
+      "value": "#156f4b",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pink-fgColor",
-      "value": "#",
+      "value": "#b12f79",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-plum-fgColor",
-      "value": "#",
+      "value": "#961edc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-purple-fgColor",
-      "value": "#",
+      "value": "#783ae4",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-red-fgColor",
-      "value": "#",
+      "value": "#c50d28",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-teal-fgColor",
-      "value": "#",
+      "value": "#106e75",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-yellow-fgColor",
-      "value": "#",
+      "value": "#805900",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-accent",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-attention",
-      "value": "#",
+      "value": "#9a6700",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-black",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-closed",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-danger",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-default",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-done",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-draft",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-link",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-muted",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-neutral",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-onEmphasis",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-onInverse",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-open",
-      "value": "#",
+      "value": "#1a7f37",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-severe",
-      "value": "#",
+      "value": "#bc4c00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-sponsors",
-      "value": "#",
+      "value": "#bf3989",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-success",
-      "value": "#",
+      "value": "#1a7f37",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-upsell",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--fgColor-white",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--header-fgColor-default",
-      "value": "#",
+      "value": "#ffffffb3",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--header-fgColor-logo",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-auburn-fgColor-active",
-      "value": "#",
+      "value": "#5d3937",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-auburn-fgColor-hover",
-      "value": "#",
+      "value": "#744744",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-auburn-fgColor-rest",
-      "value": "#",
+      "value": "#8a5551",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-blue-fgColor-active",
-      "value": "#",
+      "value": "#003d99",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-blue-fgColor-hover",
-      "value": "#",
+      "value": "#004db3",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-blue-fgColor-rest",
-      "value": "#",
+      "value": "#005fcc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-brown-fgColor-active",
-      "value": "#",
+      "value": "#51412f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-brown-fgColor-hover",
-      "value": "#",
+      "value": "#64513a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-brown-fgColor-rest",
-      "value": "#",
+      "value": "#755f43",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-coral-fgColor-active",
-      "value": "#",
+      "value": "#7e2011",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-coral-fgColor-hover",
-      "value": "#",
+      "value": "#9b2712",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-coral-fgColor-rest",
-      "value": "#",
+      "value": "#ba2e12",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-cyan-fgColor-active",
-      "value": "#",
+      "value": "#004857",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-cyan-fgColor-hover",
-      "value": "#",
+      "value": "#00596b",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-cyan-fgColor-rest",
-      "value": "#",
+      "value": "#006a80",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-gray-fgColor-active",
-      "value": "#",
+      "value": "#424448",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-gray-fgColor-hover",
-      "value": "#",
+      "value": "#4e535a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-gray-fgColor-rest",
-      "value": "#",
+      "value": "#5c6570",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-green-fgColor-active",
-      "value": "#",
+      "value": "#254b34",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-green-fgColor-hover",
-      "value": "#",
+      "value": "#285c3b",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-green-fgColor-rest",
-      "value": "#",
+      "value": "#2b6e3f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-indigo-fgColor-active",
-      "value": "#",
+      "value": "#2d2db4",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-indigo-fgColor-hover",
-      "value": "#",
+      "value": "#393cd5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-indigo-fgColor-rest",
-      "value": "#",
+      "value": "#494edf",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lemon-fgColor-active",
-      "value": "#",
+      "value": "#523f00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lemon-fgColor-hover",
-      "value": "#",
+      "value": "#654f01",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lemon-fgColor-rest",
-      "value": "#",
+      "value": "#786002",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lime-fgColor-active",
-      "value": "#",
+      "value": "#2f4a21",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lime-fgColor-hover",
-      "value": "#",
+      "value": "#3a5b25",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lime-fgColor-rest",
-      "value": "#",
+      "value": "#476c28",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-olive-fgColor-active",
-      "value": "#",
+      "value": "#3b4927",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-olive-fgColor-hover",
-      "value": "#",
+      "value": "#495a2b",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-olive-fgColor-rest",
-      "value": "#",
+      "value": "#56682c",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-orange-fgColor-active",
-      "value": "#",
+      "value": "#70300f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-orange-fgColor-hover",
-      "value": "#",
+      "value": "#8d3c11",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-orange-fgColor-rest",
-      "value": "#",
+      "value": "#a24610",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pine-fgColor-active",
-      "value": "#",
+      "value": "#114b36",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pine-fgColor-hover",
-      "value": "#",
+      "value": "#135d41",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pine-fgColor-rest",
-      "value": "#",
+      "value": "#156f4b",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pink-fgColor-active",
-      "value": "#",
+      "value": "#6e2b53",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pink-fgColor-hover",
-      "value": "#",
+      "value": "#8e2e66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pink-fgColor-rest",
-      "value": "#",
+      "value": "#b12f79",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-plum-fgColor-active",
-      "value": "#",
+      "value": "#651d96",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-plum-fgColor-hover",
-      "value": "#",
+      "value": "#7d1eb8",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-plum-fgColor-rest",
-      "value": "#",
+      "value": "#961edc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-purple-fgColor-active",
-      "value": "#",
+      "value": "#4f21ab",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-purple-fgColor-hover",
-      "value": "#",
+      "value": "#6223d7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-purple-fgColor-rest",
-      "value": "#",
+      "value": "#783ae4",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-red-fgColor-active",
-      "value": "#",
+      "value": "#880c27",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-red-fgColor-hover",
-      "value": "#",
+      "value": "#a60c29",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-red-fgColor-rest",
-      "value": "#",
+      "value": "#c50d28",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-teal-fgColor-active",
-      "value": "#",
+      "value": "#0a4852",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-teal-fgColor-hover",
-      "value": "#",
+      "value": "#0d5b63",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-teal-fgColor-rest",
-      "value": "#",
+      "value": "#106e75",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-yellow-fgColor-active",
-      "value": "#",
+      "value": "#5c3d00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-yellow-fgColor-hover",
-      "value": "#",
+      "value": "#704d00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-yellow-fgColor-rest",
-      "value": "#",
+      "value": "#805900",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--reactionButton-selected-fgColor-hover",
-      "value": "#",
+      "value": "#0550ae",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--reactionButton-selected-fgColor-rest",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--tooltip-fgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--treeViewItem-leadingVisual-iconColor-rest",
-      "value": "#",
+      "value": "#54aeff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--underlineNav-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     }
@@ -3501,1453 +3532,1453 @@ export const propertiesMap: Record<string, Property[]> = {
   "backgroundColor": [
     {
       "name": "--avatar-bgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--avatarStack-fade-bgColor-default",
-      "value": "#",
+      "value": "#c8d1da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--avatarStack-fade-bgColor-muted",
-      "value": "#",
+      "value": "#dae0e7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-accent-emphasis",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-accent-muted",
-      "value": "#",
+      "value": "#ddf4ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-attention-emphasis",
-      "value": "#",
+      "value": "#9a6700",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-attention-muted",
-      "value": "#",
+      "value": "#fff8c5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-black",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-closed-emphasis",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-closed-muted",
-      "value": "#",
+      "value": "#ffebe9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-danger-emphasis",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-danger-muted",
-      "value": "#",
+      "value": "#ffebe9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-default",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-done-emphasis",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-done-muted",
-      "value": "#",
+      "value": "#fbefff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-draft-emphasis",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-draft-muted",
-      "value": "#",
+      "value": "#818b981f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-emphasis",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-inset",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-inverse",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-muted",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-neutral-emphasis",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-neutral-muted",
-      "value": "#",
+      "value": "#818b981f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-open-emphasis",
-      "value": "#",
+      "value": "#1f883d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-open-muted",
-      "value": "#",
+      "value": "#dafbe1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-severe-emphasis",
-      "value": "#",
+      "value": "#bc4c00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-severe-muted",
-      "value": "#",
+      "value": "#fff1e5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-sponsors-emphasis",
-      "value": "#",
+      "value": "#bf3989",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-sponsors-muted",
-      "value": "#",
+      "value": "#ffeff7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-success-emphasis",
-      "value": "#",
+      "value": "#1f883d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-success-muted",
-      "value": "#",
+      "value": "#dafbe1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-transparent",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-upsell-emphasis",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-upsell-muted",
-      "value": "#",
+      "value": "#fbefff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--bgColor-white",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-bgColor-active",
-      "value": "#",
+      "value": "#a40e26",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-bgColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-bgColor-hover",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-bgColor-rest",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-bgColor-active",
-      "value": "#",
+      "value": "#e6eaef",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-bgColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-bgColor-hover",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-bgColor-rest",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-default-bgColor-selected",
-      "value": "#",
+      "value": "#e6eaef",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-inactive-bgColor",
-      "value": "#",
+      "value": "#e6eaef",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-bgColor-active",
-      "value": "#",
+      "value": "#818b9826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-bgColor-disabled",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-bgColor-hover",
-      "value": "#",
+      "value": "#818b981a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-bgColor-rest",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-bgColor-active",
-      "value": "#",
+      "value": "#0757ba",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-bgColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-bgColor-hover",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-outline-bgColor-rest",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-bgColor-active",
-      "value": "#",
+      "value": "#197935",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-bgColor-disabled",
-      "value": "#",
+      "value": "#95d8a6",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-bgColor-hover",
-      "value": "#",
+      "value": "#1c8139",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-bgColor-rest",
-      "value": "#",
+      "value": "#1f883d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-danger-bgColor-disabled",
-      "value": "#",
+      "value": "#cf222e0d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-danger-bgColor-hover",
-      "value": "#",
+      "value": "#ffffff33",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-danger-bgColor-rest",
-      "value": "#",
+      "value": "#cf222e1a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-default-bgColor-rest",
-      "value": "#",
+      "value": "#818b981f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-invisible-bgColor-rest",
-      "value": "#",
+      "value": "#818b981f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-outline-bgColor-disabled",
-      "value": "#",
+      "value": "#0969da0d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-outline-bgColor-hover",
-      "value": "#",
+      "value": "#ffffff33",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-outline-bgColor-rest",
-      "value": "#",
+      "value": "#0969da1a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--buttonCounter-primary-bgColor-rest",
-      "value": "#",
+      "value": "#002d1133",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--card-bgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-activeline-bgColor",
-      "value": "#",
+      "value": "#818b981f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-bgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-gutters-bgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-lines-bgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--codeMirror-selection-bgColor",
-      "value": "#",
+      "value": "#54aeff66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-bgColor-0",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-bgColor-1",
-      "value": "#",
+      "value": "#aceebb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-bgColor-2",
-      "value": "#",
+      "value": "#4ac26b",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-bgColor-3",
-      "value": "#",
+      "value": "#2da44e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-default-bgColor-4",
-      "value": "#",
+      "value": "#116329",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-halloween-bgColor-1",
-      "value": "#",
+      "value": "#f0db3d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-halloween-bgColor-2",
-      "value": "#",
+      "value": "#ffd642",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-halloween-bgColor-3",
-      "value": "#",
+      "value": "#f68c41",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-halloween-bgColor-4",
-      "value": "#",
+      "value": "#1f2328",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-winter-bgColor-1",
-      "value": "#",
+      "value": "#b6e3ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-winter-bgColor-2",
-      "value": "#",
+      "value": "#54aeff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-winter-bgColor-3",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--contribution-winter-bgColor-4",
-      "value": "#",
+      "value": "#0a3069",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-bgColor-active",
-      "value": "#",
+      "value": "#e6eaef",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-bgColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-bgColor-hover",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-bgColor-rest",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-bgColor-selected",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-bgColor-active",
-      "value": "#",
+      "value": "#0757ba",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-bgColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-bgColor-hover",
-      "value": "#",
+      "value": "#0860ca",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-checked-bgColor-rest",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-danger-bgColor-active",
-      "value": "#",
+      "value": "#ffebe966",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-danger-bgColor-hover",
-      "value": "#",
+      "value": "#ffebe9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-bgColor-active",
-      "value": "#",
+      "value": "#818b9826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-bgColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-bgColor-hover",
-      "value": "#",
+      "value": "#818b981a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-bgColor-rest",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-transparent-bgColor-selected",
-      "value": "#",
+      "value": "#818b9826",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlKnob-bgColor-checked",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlKnob-bgColor-disabled",
-      "value": "#",
+      "value": "#eff2f5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlKnob-bgColor-rest",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-bgColor-active",
-      "value": "#",
+      "value": "#dae0e7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-bgColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-bgColor-hover",
-      "value": "#",
+      "value": "#e0e6eb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--controlTrack-bgColor-rest",
-      "value": "#",
+      "value": "#e6eaef",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--counter-bgColor-emphasis",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--counter-bgColor-muted",
-      "value": "#",
+      "value": "#818b981f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--dashboard-bgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-additionLine-bgColor",
-      "value": "#",
+      "value": "#dafbe1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-additionNum-bgColor",
-      "value": "#",
+      "value": "#aceebb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-additionWord-bgColor",
-      "value": "#",
+      "value": "#aceebb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-deletionLine-bgColor",
-      "value": "#",
+      "value": "#ffebe9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-deletionNum-bgColor",
-      "value": "#",
+      "value": "#ffcecb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-deletionWord-bgColor",
-      "value": "#",
+      "value": "#ffcecb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-emptyLine-bgColor",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-emptyNum-bgColor",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-hunkLine-bgColor",
-      "value": "#",
+      "value": "#ddf4ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-hunkNum-bgColor-hover",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-hunkNum-bgColor-rest",
-      "value": "#",
+      "value": "#b6e3ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-auburn-bgColor-emphasis",
-      "value": "#",
+      "value": "#9d615c",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-auburn-bgColor-muted",
-      "value": "#",
+      "value": "#f2e9e9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-blue-bgColor-emphasis",
-      "value": "#",
+      "value": "#006edb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-blue-bgColor-muted",
-      "value": "#",
+      "value": "#d1f0ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-brown-bgColor-emphasis",
-      "value": "#",
+      "value": "#856d4c",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-brown-bgColor-muted",
-      "value": "#",
+      "value": "#eeeae2",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-coral-bgColor-emphasis",
-      "value": "#",
+      "value": "#d43511",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-coral-bgColor-muted",
-      "value": "#",
+      "value": "#ffe5db",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-cyan-bgColor-emphasis",
-      "value": "#",
+      "value": "#007b94",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-cyan-bgColor-muted",
-      "value": "#",
+      "value": "#bdf4ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-gray-bgColor-emphasis",
-      "value": "#",
+      "value": "#647182",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-gray-bgColor-muted",
-      "value": "#",
+      "value": "#e8ecf2",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-green-bgColor-emphasis",
-      "value": "#",
+      "value": "#2c8141",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-green-bgColor-muted",
-      "value": "#",
+      "value": "#caf7ca",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-indigo-bgColor-emphasis",
-      "value": "#",
+      "value": "#5a61e7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-indigo-bgColor-muted",
-      "value": "#",
+      "value": "#e5e9ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lemon-bgColor-emphasis",
-      "value": "#",
+      "value": "#866e04",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lemon-bgColor-muted",
-      "value": "#",
+      "value": "#f7eea1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lime-bgColor-emphasis",
-      "value": "#",
+      "value": "#527a29",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-lime-bgColor-muted",
-      "value": "#",
+      "value": "#e3f2b5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-olive-bgColor-emphasis",
-      "value": "#",
+      "value": "#64762d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-olive-bgColor-muted",
-      "value": "#",
+      "value": "#f0f0ad",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-orange-bgColor-emphasis",
-      "value": "#",
+      "value": "#b8500f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-orange-bgColor-muted",
-      "value": "#",
+      "value": "#ffe7d1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pine-bgColor-emphasis",
-      "value": "#",
+      "value": "#167e53",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pine-bgColor-muted",
-      "value": "#",
+      "value": "#bff8db",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pink-bgColor-emphasis",
-      "value": "#",
+      "value": "#ce2c85",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-pink-bgColor-muted",
-      "value": "#",
+      "value": "#ffe5f1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-plum-bgColor-emphasis",
-      "value": "#",
+      "value": "#a830e8",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-plum-bgColor-muted",
-      "value": "#",
+      "value": "#f8e5ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-purple-bgColor-emphasis",
-      "value": "#",
+      "value": "#894ceb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-purple-bgColor-muted",
-      "value": "#",
+      "value": "#f1e5ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-red-bgColor-emphasis",
-      "value": "#",
+      "value": "#df0c24",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-red-bgColor-muted",
-      "value": "#",
+      "value": "#ffe2e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-teal-bgColor-emphasis",
-      "value": "#",
+      "value": "#127e81",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-teal-bgColor-muted",
-      "value": "#",
+      "value": "#c7f5ef",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-yellow-bgColor-emphasis",
-      "value": "#",
+      "value": "#946a00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--display-yellow-bgColor-muted",
-      "value": "#",
+      "value": "#ffec9e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--header-bgColor",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--headerSearch-bgColor",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--highlight-neutral-bgColor",
-      "value": "#",
+      "value": "#fff8c5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-auburn-bgColor-active",
-      "value": "#",
+      "value": "#d4b7b5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-auburn-bgColor-hover",
-      "value": "#",
+      "value": "#e6d6d5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-auburn-bgColor-rest",
-      "value": "#",
+      "value": "#f2e9e9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-blue-bgColor-active",
-      "value": "#",
+      "value": "#75c8ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-blue-bgColor-hover",
-      "value": "#",
+      "value": "#ade1ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-blue-bgColor-rest",
-      "value": "#",
+      "value": "#d1f0ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-brown-bgColor-active",
-      "value": "#",
+      "value": "#cbbda4",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-brown-bgColor-hover",
-      "value": "#",
+      "value": "#dfd7c8",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-brown-bgColor-rest",
-      "value": "#",
+      "value": "#eeeae2",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-coral-bgColor-active",
-      "value": "#",
+      "value": "#fcab92",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-coral-bgColor-hover",
-      "value": "#",
+      "value": "#fecebe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-coral-bgColor-rest",
-      "value": "#",
+      "value": "#ffe5db",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-cyan-bgColor-active",
-      "value": "#",
+      "value": "#00d0fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-cyan-bgColor-hover",
-      "value": "#",
+      "value": "#7ae9ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-cyan-bgColor-rest",
-      "value": "#",
+      "value": "#bdf4ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-gray-bgColor-active",
-      "value": "#",
+      "value": "#b4c0cf",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-gray-bgColor-hover",
-      "value": "#",
+      "value": "#d2dae4",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-gray-bgColor-rest",
-      "value": "#",
+      "value": "#e8ecf2",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-green-bgColor-active",
-      "value": "#",
+      "value": "#54d961",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-green-bgColor-hover",
-      "value": "#",
+      "value": "#9ceda0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-green-bgColor-rest",
-      "value": "#",
+      "value": "#caf7ca",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-indigo-bgColor-active",
-      "value": "#",
+      "value": "#b1b9fb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-indigo-bgColor-hover",
-      "value": "#",
+      "value": "#d2d7fe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-indigo-bgColor-rest",
-      "value": "#",
+      "value": "#e5e9ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lemon-bgColor-active",
-      "value": "#",
+      "value": "#d8bd0e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lemon-bgColor-hover",
-      "value": "#",
+      "value": "#f0db3d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lemon-bgColor-rest",
-      "value": "#",
+      "value": "#f7eea1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lime-bgColor-active",
-      "value": "#",
+      "value": "#9bd039",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lime-bgColor-hover",
-      "value": "#",
+      "value": "#c7e580",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-lime-bgColor-rest",
-      "value": "#",
+      "value": "#e3f2b5",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-olive-bgColor-active",
-      "value": "#",
+      "value": "#b9c832",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-olive-bgColor-hover",
-      "value": "#",
+      "value": "#dbe170",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-olive-bgColor-rest",
-      "value": "#",
+      "value": "#f0f0ad",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-orange-bgColor-active",
-      "value": "#",
+      "value": "#fbaf74",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-orange-bgColor-hover",
-      "value": "#",
+      "value": "#fecfaa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-orange-bgColor-rest",
-      "value": "#",
+      "value": "#ffe7d1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pine-bgColor-active",
-      "value": "#",
+      "value": "#1dd781",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pine-bgColor-hover",
-      "value": "#",
+      "value": "#80efb9",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pine-bgColor-rest",
-      "value": "#",
+      "value": "#bff8db",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pink-bgColor-active",
-      "value": "#",
+      "value": "#f8a5cf",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pink-bgColor-hover",
-      "value": "#",
+      "value": "#fdc9e2",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-pink-bgColor-rest",
-      "value": "#",
+      "value": "#ffe5f1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-plum-bgColor-active",
-      "value": "#",
+      "value": "#e2a7fb",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-plum-bgColor-hover",
-      "value": "#",
+      "value": "#f0cdfe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-plum-bgColor-rest",
-      "value": "#",
+      "value": "#f8e5ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-purple-bgColor-active",
-      "value": "#",
+      "value": "#d1b1fc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-purple-bgColor-hover",
-      "value": "#",
+      "value": "#e6d2fe",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-purple-bgColor-rest",
-      "value": "#",
+      "value": "#f1e5ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-red-bgColor-active",
-      "value": "#",
+      "value": "#fda5a7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-red-bgColor-hover",
-      "value": "#",
+      "value": "#fecdcd",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-red-bgColor-rest",
-      "value": "#",
+      "value": "#ffe2e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-teal-bgColor-active",
-      "value": "#",
+      "value": "#22d3c7",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-teal-bgColor-hover",
-      "value": "#",
+      "value": "#89ebe1",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-teal-bgColor-rest",
-      "value": "#",
+      "value": "#c7f5ef",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-yellow-bgColor-active",
-      "value": "#",
+      "value": "#ebb400",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-yellow-bgColor-hover",
-      "value": "#",
+      "value": "#ffd642",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--label-yellow-bgColor-rest",
-      "value": "#",
+      "value": "#ffec9e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--menu-bgColor-active",
-      "value": "#",
+      "value": "#ffffff00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--overlay-backdrop-bgColor",
-      "value": "#",
+      "value": "#c8d1da66",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--overlay-bgColor",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--page-header-bgColor",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-accent",
-      "value": "#",
+      "value": "#0969da",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-attention",
-      "value": "#",
+      "value": "#9a6700",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-danger",
-      "value": "#",
+      "value": "#cf222e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-done",
-      "value": "#",
+      "value": "#8250df",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-neutral",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-severe",
-      "value": "#",
+      "value": "#bc4c00",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-sponsors",
-      "value": "#",
+      "value": "#bf3989",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-bgColor-success",
-      "value": "#",
+      "value": "#1f883d",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--progressBar-track-bgColor",
-      "value": "#",
+      "value": "#d1d9e0",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--reactionButton-selected-bgColor-hover",
-      "value": "#",
+      "value": "#caecff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--reactionButton-selected-bgColor-rest",
-      "value": "#",
+      "value": "#ddf4ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--selectMenu-bgColor-active",
-      "value": "#",
+      "value": "#b6e3ff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--selection-bgColor",
-      "value": "#",
+      "value": "#0969da33",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--sideNav-bgColor-selected",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--skeletonLoader-bgColor",
-      "value": "#",
+      "value": "#818b981a",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--timelineBadge-bgColor",
-      "value": "#",
+      "value": "#f6f8fa",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--tooltip-bgColor",
-      "value": "#",
+      "value": "#25292e",
       "kind": "functional",
       "type": "color"
     }
@@ -4955,67 +4986,67 @@ export const propertiesMap: Record<string, Property[]> = {
   "fill": [
     {
       "name": "--button-danger-iconColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-iconColor-rest",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-hover",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-iconColor-rest",
-      "value": "#",
+      "value": "#ffffffcc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-star-iconColor",
-      "value": "#",
+      "value": "#eac54f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-expander-iconColor",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--treeViewItem-leadingVisual-iconColor-rest",
-      "value": "#",
+      "value": "#54aeff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--underlineNav-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     }
@@ -5023,67 +5054,67 @@ export const propertiesMap: Record<string, Property[]> = {
   "stroke": [
     {
       "name": "--button-danger-iconColor-hover",
-      "value": "#",
+      "value": "#ffffff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-danger-iconColor-rest",
-      "value": "#",
+      "value": "#d1242f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-disabled",
-      "value": "#",
+      "value": "#818b98",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-hover",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-invisible-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-primary-iconColor-rest",
-      "value": "#",
+      "value": "#ffffffcc",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--button-star-iconColor",
-      "value": "#",
+      "value": "#eac54f",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--control-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--diffBlob-expander-iconColor",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--treeViewItem-leadingVisual-iconColor-rest",
-      "value": "#",
+      "value": "#54aeff",
       "kind": "functional",
       "type": "color"
     },
     {
       "name": "--underlineNav-iconColor-rest",
-      "value": "#",
+      "value": "#59636e",
       "kind": "functional",
       "type": "color"
     }
@@ -5091,73 +5122,73 @@ export const propertiesMap: Record<string, Property[]> = {
   "transitionDuration": [
     {
       "name": "--base-duration-0",
-      "value": "0",
+      "value": "0ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-100",
-      "value": "1",
+      "value": "100ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-1000",
-      "value": "1",
+      "value": "1000ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-200",
-      "value": "2",
+      "value": "200ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-300",
-      "value": "3",
+      "value": "300ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-400",
-      "value": "4",
+      "value": "400ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-50",
-      "value": "5",
+      "value": "50ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-500",
-      "value": "5",
+      "value": "500ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-600",
-      "value": "6",
+      "value": "600ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-700",
-      "value": "7",
+      "value": "700ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-800",
-      "value": "8",
+      "value": "800ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-900",
-      "value": "9",
+      "value": "900ms",
       "kind": "base",
       "type": "duration"
     }
@@ -5191,73 +5222,73 @@ export const propertiesMap: Record<string, Property[]> = {
   "animationDuration": [
     {
       "name": "--base-duration-0",
-      "value": "0",
+      "value": "0ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-100",
-      "value": "1",
+      "value": "100ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-1000",
-      "value": "1",
+      "value": "1000ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-200",
-      "value": "2",
+      "value": "200ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-300",
-      "value": "3",
+      "value": "300ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-400",
-      "value": "4",
+      "value": "400ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-50",
-      "value": "5",
+      "value": "50ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-500",
-      "value": "5",
+      "value": "500ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-600",
-      "value": "6",
+      "value": "600ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-700",
-      "value": "7",
+      "value": "700ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-800",
-      "value": "8",
+      "value": "800ms",
       "kind": "base",
       "type": "duration"
     },
     {
       "name": "--base-duration-900",
-      "value": "9",
+      "value": "900ms",
       "kind": "base",
       "type": "duration"
     }

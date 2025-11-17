@@ -30,6 +30,14 @@ fs.writeFileSync(
   filePath,
   `// Generated file, do not edit manually. Run 'npm run precompile' to regenerate.
 
-export const propertiesMap: Record<string, Property[]> = ${JSON.stringify(propertiesMapFromRules, null, 2)}
+// copy of type Suggestion from data/rules
+type Suggestion = {
+  name: \`--$\{string}\`
+  value: string
+  kind: 'base' | 'functional'
+  type: string
+}
+
+export const propertiesMap: Record<string, Suggestion[]> = ${JSON.stringify(propertiesMapFromRules, null, 2)}
   `,
 )

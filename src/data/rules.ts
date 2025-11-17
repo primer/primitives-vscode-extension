@@ -15,12 +15,12 @@ import lightTheme from '@primer/primitives/dist/styleLint/functional/themes/ligh
 import baseMotion from '@primer/primitives/dist/styleLint/base/motion/motion.json'
 
 // TODO: not used yet because it doesn't fit in propertiesMap
-import functionalBreakpoints from '@primer/primitives/dist/styleLint/functional/size/breakpoints.json'
-import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
+// import functionalBreakpoints from '@primer/primitives/dist/styleLint/functional/size/breakpoints.json'
+// import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
 
 export type Suggestion = {
   name: `--${string}`
-  value: string
+  value: string | number
   kind: 'base' | 'functional'
   type: string
 }
@@ -32,7 +32,7 @@ const format = (dataSubset: unknown): Suggestion[] => {
 
     return {
       name: `--${key}`,
-      value: value.$value[0],
+      value: Array.isArray(value.$value) ? value.$value[0] : value.$value,
       kind: value.filePath.includes('base') ? 'base' : 'functional',
       type: value.$type,
     }
