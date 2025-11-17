@@ -180,7 +180,7 @@ connection.onHover(params => {
 
   markdown += `\n---\n\n`
 
-  const docLink = getDocumentationLink(variableInfo.name, variableInfo.type)
+  const docLink = getDocumentationLink(variableInfo.type)
   markdown += `[View documentation](${docLink})\n`
 
   return {
