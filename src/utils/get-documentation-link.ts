@@ -4,7 +4,7 @@ const DOC_CONFIG = {
   typography: 'https://primer.style/product/primitives/typography/',
 }
 
-export const getDocumentationLink = (variableName: string, type: string): string => {
+export const getDocumentationLink = (type: string): string => {
   const typeKey = type === 'font' ? 'typography' : type
   return DOC_CONFIG[typeKey] ?? 'https://primer.style/product/primitives/'
 }
