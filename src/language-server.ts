@@ -166,8 +166,7 @@ connection.onHover(params => {
   let markdown = `**\`${variableInfo.name}\`**\n\n`
   markdown += `\n---\n\n`
 
-  const kindLink = `https://primer.style/product/primitives/token-names/#${variableInfo.kind}`
-  markdown += `- **Kind:** [${variableInfo.kind}](${kindLink})\n`
+  markdown += `- **Kind:** [${variableInfo.kind}](https://primer.style/product/primitives/token-names/#${variableInfo.kind})\n`
   markdown += `- **Type:** ${variableInfo.type}\n`
   markdown += `\n---\n\n`
 
