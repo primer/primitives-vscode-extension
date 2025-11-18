@@ -27,12 +27,12 @@ export const getSuggestions = (property: keyof CSS.Properties) => {
   const functionalVariables = suggestedVariables.filter(variable => variable.kind === 'functional')
   const baseVariables = suggestedVariables.filter(variable => variable.kind === 'base')
 
-  // todo 1: sort sizes consistently
+  // TODO 1: sort sizes consistently
   // right now they are sorted by how they appear in the data file
   // we should sort them by size instead: xsmall, small, medium, large, xlarge
   // same for base sizes: they need to be sorted by integer value not alphabetically like a string
 
-  // todo 2: contextual repetition
+  // TODO 2: contextual repetition
   // if there are other variables in the same block/document
   // we should take hints from them like hover state or control-small or button-primary
   const suggestedVariablesWithSortText = [
