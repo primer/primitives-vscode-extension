@@ -16,7 +16,7 @@ import lightTheme from '@primer/primitives/dist/styleLint/functional/themes/ligh
 import baseMotion from '@primer/primitives/dist/styleLint/base/motion/motion.json'
 
 // TODO: not used yet because it doesn't fit in propertiesMap
-import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
+// import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
 
 export type Suggestion =
   | {
