@@ -1253,6 +1253,48 @@ export const propertiesMap: Record<string, Suggestion[]> = {
       "kind": "functional",
       "type": "dimension",
       "docsUrl": "https://primer.style/product/primitives/size?variable=--overlay-width-xsmall"
+    },
+    {
+      "name": "--breakpoint-large",
+      "value": "63.25rem",
+      "kind": "functional",
+      "type": "dimension",
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--breakpoint-large"
+    },
+    {
+      "name": "--breakpoint-medium",
+      "value": "48rem",
+      "kind": "functional",
+      "type": "dimension",
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--breakpoint-medium"
+    },
+    {
+      "name": "--breakpoint-small",
+      "value": "34rem",
+      "kind": "functional",
+      "type": "dimension",
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--breakpoint-small"
+    },
+    {
+      "name": "--breakpoint-xlarge",
+      "value": "80rem",
+      "kind": "functional",
+      "type": "dimension",
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--breakpoint-xlarge"
+    },
+    {
+      "name": "--breakpoint-xsmall",
+      "value": "20rem",
+      "kind": "functional",
+      "type": "dimension",
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--breakpoint-xsmall"
+    },
+    {
+      "name": "--breakpoint-xxlarge",
+      "value": "87.5rem",
+      "kind": "functional",
+      "type": "dimension",
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--breakpoint-xxlarge"
     }
   ],
   "height": [
