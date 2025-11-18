@@ -57,7 +57,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
 
   try {
     ast = postcss.parse(currentLine)
-  } catch (error) {
+  } catch {
     // do nothing
   }
 
@@ -80,7 +80,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       } else if (params.position.character <= blockValuePositionEnd) {
         property = 'paddingBlock'
       }
-    } catch (error) {
+    } catch {
       // do nothing
     }
   } else if (property === 'border') {
@@ -95,7 +95,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       } else if (params.position.character <= borderWidthPositionEnd) {
         property = 'borderWidth'
       }
-    } catch (error) {
+    } catch {
       // do nothing
     }
   }
@@ -111,8 +111,8 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
         typeof variable.value === 'string' && isColor(variable.value)
           ? CompletionItemKind.Color
           : variable.kind === 'functional'
-          ? CompletionItemKind.Field
-          : CompletionItemKind.Constructor,
+            ? CompletionItemKind.Field
+            : CompletionItemKind.Constructor,
       // sortText: variable.sortText
       sortText: '---a',
       // this is slightly silly because what about multiple variables in one line
