@@ -3,6 +3,7 @@
 exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
 [
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--control-large-paddingBlock",
     "kind": "functional",
     "name": "--control-large-paddingBlock",
     "sortText": "---aa",
@@ -10,6 +11,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.625rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--control-medium-paddingBlock",
     "kind": "functional",
     "name": "--control-medium-paddingBlock",
     "sortText": "---ab",
@@ -17,6 +19,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.375rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--control-small-paddingBlock",
     "kind": "functional",
     "name": "--control-small-paddingBlock",
     "sortText": "---ac",
@@ -24,6 +27,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.015625rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--control-xlarge-paddingBlock",
     "kind": "functional",
     "name": "--control-xlarge-paddingBlock",
     "sortText": "---ad",
@@ -31,6 +35,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.875rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--control-xsmall-paddingBlock",
     "kind": "functional",
     "name": "--control-xsmall-paddingBlock",
     "sortText": "---ae",
@@ -38,6 +43,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.125rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--overlay-paddingBlock-condensed",
     "kind": "functional",
     "name": "--overlay-paddingBlock-condensed",
     "sortText": "---af",
@@ -45,6 +51,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.015625rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--overlay-paddingBlock-normal",
     "kind": "functional",
     "name": "--overlay-paddingBlock-normal",
     "sortText": "---ag",
@@ -52,6 +59,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.046875rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-12",
     "kind": "base",
     "name": "--base-size-12",
     "sortText": "---za",
@@ -59,6 +67,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.75rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-2",
     "kind": "base",
     "name": "--base-size-2",
     "sortText": "---zb",
@@ -66,6 +75,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.125rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-4",
     "kind": "base",
     "name": "--base-size-4",
     "sortText": "---zc",
@@ -73,6 +83,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.25rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-6",
     "kind": "base",
     "name": "--base-size-6",
     "sortText": "---zd",
@@ -80,6 +91,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.375rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-8",
     "kind": "base",
     "name": "--base-size-8",
     "sortText": "---ze",
@@ -87,6 +99,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "0.5rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-16",
     "kind": "base",
     "name": "--base-size-16",
     "sortText": "---zf",
@@ -94,6 +107,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "1rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-20",
     "kind": "base",
     "name": "--base-size-20",
     "sortText": "---zg",
@@ -101,6 +115,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "1.25rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-24",
     "kind": "base",
     "name": "--base-size-24",
     "sortText": "---zh",
@@ -108,6 +123,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "1.5rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-28",
     "kind": "base",
     "name": "--base-size-28",
     "sortText": "---zi",
@@ -115,6 +131,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "1.75rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-32",
     "kind": "base",
     "name": "--base-size-32",
     "sortText": "---zj",
@@ -122,6 +139,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "2rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-36",
     "kind": "base",
     "name": "--base-size-36",
     "sortText": "---zk",
@@ -129,6 +147,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "2.25rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-40",
     "kind": "base",
     "name": "--base-size-40",
     "sortText": "---zl",
@@ -136,6 +155,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "2.5rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-44",
     "kind": "base",
     "name": "--base-size-44",
     "sortText": "---zm",
@@ -143,6 +163,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "2.75rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-48",
     "kind": "base",
     "name": "--base-size-48",
     "sortText": "---zn",
@@ -150,6 +171,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "3rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-64",
     "kind": "base",
     "name": "--base-size-64",
     "sortText": "---zo",
@@ -157,6 +179,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "4rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-80",
     "kind": "base",
     "name": "--base-size-80",
     "sortText": "---zp",
@@ -164,6 +187,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "5rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-96",
     "kind": "base",
     "name": "--base-size-96",
     "sortText": "---zq",
@@ -171,6 +195,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "6rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-112",
     "kind": "base",
     "name": "--base-size-112",
     "sortText": "---zr",
@@ -178,6 +203,7 @@ exports[`Suggestions > returns suggestions for paddingBottom 1`] = `
     "value": "7rem",
   },
   {
+    "docsUrl": "https://primer.style/product/primitives/size?variable=--base-size-128",
     "kind": "base",
     "name": "--base-size-128",
     "sortText": "---zs",

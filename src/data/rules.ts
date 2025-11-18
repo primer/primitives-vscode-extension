@@ -22,6 +22,7 @@ export type Suggestion =
   | {
       name: `--${string}`
       kind: 'base' | 'functional'
+      docsUrl: string
     } & (
       | {
           value: string
@@ -34,7 +35,7 @@ export type Suggestion =
     )
 
 // TODO: should we type dataSubset?
-const format = (dataSubset: unknown): Suggestion[] => {
+const format = (dataSubset: unknown, slug: 'color' | 'size' | 'typography' | ''): Suggestion[] => {
   return Object.keys(dataSubset).map(key => {
     const value = dataSubset[key]
 
@@ -43,6 +44,7 @@ const format = (dataSubset: unknown): Suggestion[] => {
       value: Array.isArray(value.$value) ? value.$value[0] : value.$value,
       kind: value.filePath.includes('base') ? 'base' : 'functional',
       type: value.$type,
+      docsUrl: `https://primer.style/product/primitives/${slug}?variable=--${key}`,
     }
   })
 }
@@ -56,49 +58,49 @@ type Rule = {
 // TODO: make sure this mapping (and aliases) has all the properties we have opinions for
 export const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   padding: [
-    {data: format(baseSize)},
-    {data: format(functionalSize), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
-    {data: format(functionalSizeFine), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
-    {data: format(functionalSizeCoarse), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
+    {data: format(baseSize, 'size')},
+    {data: format(functionalSize, 'size'), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
+    {data: format(functionalSizeFine, 'size'), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
+    {data: format(functionalSizeCoarse, 'size'), match: ['padding'], exclude: ['paddingBlock', 'paddingInline']},
   ],
-  paddingBlock: [{data: format(baseSize)}, {data: format(functionalSize), match: ['paddingBlock']}],
-  paddingInline: [{data: format(baseSize)}, {data: format(functionalSize), match: ['paddingInline']}],
+  paddingBlock: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['paddingBlock']}],
+  paddingInline: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['paddingInline']}],
 
-  gap: [{data: format(baseSize)}, {data: format(functionalSize), match: ['gap']}],
-  margin: [{data: format(baseSize)}, {data: format(functionalSize), match: ['gap']}],
+  gap: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['gap']}],
+  margin: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['gap']}],
 
-  width: [{data: format(baseSize)}, {data: format(functionalSize), match: ['width', 'minTarget']}],
+  width: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['width', 'minTarget']}],
   height: [
-    {data: format(baseSize)},
-    {data: format(functionalSize), match: ['height', 'size', 'minTarget', 'lineBoxHeight']},
+    {data: format(baseSize, 'size')},
+    {data: format(functionalSize, 'size'), match: ['height', 'size', 'minTarget', 'lineBoxHeight']},
   ],
 
-  borderWidth: [{data: format(functionalBorder), match: ['borderWidth']}],
-  borderRadius: [{data: format(functionalBorder), match: ['borderRadius']}],
-  borderColor: [{data: format(lightTheme), match: ['borderColor']}],
-  boxShadow: [{data: format(functionalBorder), match: ['boxShadow']}],
+  borderWidth: [{data: format(functionalBorder, 'size'), match: ['borderWidth']}],
+  borderRadius: [{data: format(functionalBorder, 'size'), match: ['borderRadius']}],
+  borderColor: [{data: format(lightTheme, 'color'), match: ['borderColor']}],
+  boxShadow: [{data: format(functionalBorder, 'size'), match: ['boxShadow']}],
 
-  outlineWidth: [{data: format(functionalBorder), match: ['outline-focus-width']}],
-  outlineOffset: [{data: format(functionalBorder), match: ['outline-focus-offset']}],
-  outlineColor: [{data: format(lightTheme), match: ['outlineColor']}],
+  outlineWidth: [{data: format(functionalBorder, 'size'), match: ['outline-focus-width']}],
+  outlineOffset: [{data: format(functionalBorder, 'size'), match: ['outline-focus-offset']}],
+  outlineColor: [{data: format(lightTheme, 'color'), match: ['outlineColor']}],
 
   fontWeight: [
-    {data: format(baseTypography), match: ['weight']},
-    {data: format(functionalTypography), match: ['weight']},
+    {data: format(baseTypography, 'typography'), match: ['weight']},
+    {data: format(functionalTypography, 'typography'), match: ['weight']},
   ],
-  fontSize: [{data: format(functionalTypography), match: ['size']}],
-  lineHeight: [{data: format(functionalTypography), match: ['lineHeight']}],
-  fontFamily: [{data: format(functionalTypography), match: ['fontStack']}],
-  font: [{data: format(functionalTypography), match: ['shorthand']}],
+  fontSize: [{data: format(functionalTypography, 'typography'), match: ['size']}],
+  lineHeight: [{data: format(functionalTypography, 'typography'), match: ['lineHeight']}],
+  fontFamily: [{data: format(functionalTypography, 'typography'), match: ['fontStack']}],
+  font: [{data: format(functionalTypography, 'typography'), match: ['shorthand']}],
 
   // question: should these 4 properties have the entire color scale as well?
-  color: [{data: format(lightTheme), match: ['fgColor', 'iconColor']}],
-  backgroundColor: [{data: format(lightTheme), match: ['bgColor']}],
-  fill: [{data: format(lightTheme), match: ['iconColor']}],
-  stroke: [{data: format(lightTheme), match: ['iconColor']}],
+  color: [{data: format(lightTheme, 'color'), match: ['fgColor', 'iconColor']}],
+  backgroundColor: [{data: format(lightTheme, 'color'), match: ['bgColor']}],
+  fill: [{data: format(lightTheme, 'color'), match: ['iconColor']}],
+  stroke: [{data: format(lightTheme, 'color'), match: ['iconColor']}],
 
-  transitionDuration: [{data: format(baseMotion), match: ['duration']}],
-  transitionTimingFunction: [{data: format(baseMotion), match: ['easing']}],
-  animationDuration: [{data: format(baseMotion), match: ['duration']}],
-  animationTimingFunction: [{data: format(baseMotion), match: ['easing']}],
+  transitionDuration: [{data: format(baseMotion, ''), match: ['duration']}],
+  transitionTimingFunction: [{data: format(baseMotion, ''), match: ['easing']}],
+  animationDuration: [{data: format(baseMotion, ''), match: ['duration']}],
+  animationTimingFunction: [{data: format(baseMotion, ''), match: ['easing']}],
 }
