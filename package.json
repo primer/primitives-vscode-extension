@@ -1,6 +1,6 @@
 {
   "name": "primer-primitives-autocomplete",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "displayName": "Autocomplete for Primer Primitives",
   "description": "Autocomplete for Primer Primitives",
   "publisher": "githubprimer",
@@ -21,8 +21,6 @@
     "build": "npm run precompile && tsup src/index.ts src/language-server.ts --format cjs --external vscode --minify",
     "clean": "rm -rf dist",
     "lint": "eslint ./src --ext .ts --fix",
-    "package:prepublish": "npm run build",
-    "package": "vsce package --pre-release",
     "vsce:publish": "vsce publish",
     "test": "vitest",
     "precompile": "npx ts-node src/data/precompile.ts"

@@ -1,6 +1,6 @@
 # Publishing
 
-To publish the extension to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=githubprimer.primer-primitives-autocomplete), 
+To publish the extension to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=githubprimer.primer-primitives-autocomplete),
 
 1. In [settings/secrets/actions](https://github.com/primer/primitives-vscode-extension/settings/secrets/actions), Check the "Last updated" for `VS_MARKETPLACE_TOKEN`. If it is > 7 days, [Regenerate PAT for publisher:githubprimer](https://dev.azure.com/githubprimer/_usersSettings/tokens) (Personal Access Token) and update `VS_MARKETPLACE_TOKEN` with the value. (Microsoft policy restricts PATs with longer validity than 7 days)
 2. Make sure the version in [package.json on main](https://github.com/primer/primitives-vscode-extension/blob/main/package.json#L3) is greater than the version no the [marketplace](https://marketplace.visualstudio.com/items?itemName=githubprimer.primer-primitives-autocomplete).

@@ -10,32 +10,29 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
-        
+
       - name: Run linter
         run: npm run lint
-        
+
       - name: Build extension
         run: npm run build
-        
+
       - name: Run tests
         run: npm test
-        
-      - name: Package extension
-        run: npm run package
-        
+
       - name: Publish to VS Code Marketplace
         run: npm run vsce:publish
         env:
