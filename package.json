@@ -1,6 +1,6 @@
 {
   "name": "primer-primitives-autocomplete",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "displayName": "Autocomplete for Primer Primitives",
   "description": "Autocomplete for Primer Primitives",
   "publisher": "githubprimer",
@@ -23,6 +23,7 @@
     "lint": "eslint ./src --ext .ts --fix",
     "vsce:publish": "vsce publish",
     "test": "vitest",
+    "test:package": "vsce package",
     "precompile": "npx ts-node src/data/precompile.ts"
   },
   "prettier": "@github/prettier-config",
