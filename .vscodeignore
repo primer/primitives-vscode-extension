@@ -1,0 +1,16 @@
+.github/**
+.vscode/**
+node_modules/**
+
+src/**
+demo/*
+
+.eslintrc.js
+.gitignore
+.nvmrc
+.prettierignore
+package-lock.json
+tsconfig.json
+**.md
+
+
