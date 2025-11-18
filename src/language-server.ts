@@ -117,7 +117,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       sortText: '---a',
       // this is slightly silly because what about multiple variables in one line
       // like shorthands or fallbacks
-      insertText: currentLine.includes('var') ? variable.name : ` var(${variable.name});`,
+      insertText: currentLine.includes('var') ? variable.name : `var(${variable.name});`,
       documentation: `${variable.name} ${variable.value}`,
     }
     return item
