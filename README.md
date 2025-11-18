@@ -3,7 +3,7 @@
 <h3 align="center">VSCode extension for primer/primitives</h3>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=githubprimer.primer-primitives-autocomplete">Install via theVisual Studio Marketplace ↗</a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=githubprimer.primer-primitives-autocomplete">Install from  Visual Studio Marketplace ↗</a>
   <br/>
   <br/>
   <img src="https://img.shields.io/badge/maturity-experimental-fae17d?style=flat-square"/>
