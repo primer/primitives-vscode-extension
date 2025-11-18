@@ -111,8 +111,8 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
         typeof variable.value === 'string' && isColor(variable.value)
           ? CompletionItemKind.Color
           : variable.kind === 'functional'
-          ? CompletionItemKind.Field
-          : CompletionItemKind.Constructor,
+            ? CompletionItemKind.Field
+            : CompletionItemKind.Constructor,
       // sortText: variable.sortText
       sortText: '---a',
       // this is slightly silly because what about multiple variables in one line

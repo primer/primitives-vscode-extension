@@ -18,21 +18,20 @@ import baseMotion from '@primer/primitives/dist/styleLint/base/motion/motion.jso
 // import functionalBreakpoints from '@primer/primitives/dist/styleLint/functional/size/breakpoints.json'
 // import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
 
-export type Suggestion =
+export type Suggestion = {
+  name: `--${string}`
+  kind: 'base' | 'functional'
+  docsUrl: string
+} & (
   | {
-      name: `--${string}`
-      kind: 'base' | 'functional'
-      docsUrl: string
-    } & (
-      | {
-          value: string
-          type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration'
-        }
-      | {
-          value: number
-          type: 'fontWeight' | 'number' | 'cubicBezier'
-        }
-    )
+      value: string
+      type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration'
+    }
+  | {
+      value: number
+      type: 'fontWeight' | 'number' | 'cubicBezier'
+    }
+)
 
 // TODO: should we type dataSubset?
 const format = (dataSubset: unknown, slug: 'color' | 'size' | 'typography' | ''): Suggestion[] => {
