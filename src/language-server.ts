@@ -10,7 +10,7 @@ import {
   TextDocumentSyncKind,
 } from 'vscode-languageserver/node'
 import {TextDocument} from 'vscode-languageserver-textdocument'
-import postcss from 'postcss'
+import postcss, {type Root as ASTRoot} from 'postcss'
 // import {properties, stories} from '@primer/primitives/dist/js/intellisense'
 import camelCase from 'lodash.camelcase'
 import {isColor} from './utils/is-color'
@@ -53,7 +53,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
     end: {line: params.position.line + 1, character: 0},
   })
 
-  let ast
+  let ast: ASTRoot
 
   try {
     ast = postcss.parse(currentLine)
@@ -61,9 +61,9 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
     // do nothing
   }
 
-  if (!ast) return []
+  if (!ast || ast.nodes.length === 0) return []
 
-  let property = ast.nodes[0].type === 'decl' ? camelCase(ast.nodes[0].prop) : undefined
+  let property: string = ast.nodes[0].type === 'decl' ? camelCase(ast.nodes[0].prop) : undefined
   if (!property) return []
 
   // TODO: for shorthands, property might be the second property like borderColor or paddingInline
