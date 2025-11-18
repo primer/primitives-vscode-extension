@@ -130,12 +130,9 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
 // This handler resolves additional information for the item selected in
 // the completion list.
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
-  // TODO: there's a bug here when base size is open
-  // it doesn't switch back to others
-  const variableInfo = getVariableInfo(item.label as `--${string}`)
-  if (!variableInfo) return null
-
-  // TODO: this works but reloads the page every time!
+  // const variableInfo = getVariableInfo(item.label as `--${string}`)
+  // if (!variableInfo) return null
+  // TODO: this works but reloads the page every time, commenting this out for now
   // connection.sendRequest('open-docs', {variable: variableInfo})
   return item
 })
