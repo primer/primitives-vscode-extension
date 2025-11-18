@@ -5,13 +5,7 @@
 
 version: 2
 updates:
-  # 1. Everything weekly
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: weekly
-
-  # 2. Check primitives daily
+  # Check @primer/primitives daily
   - package-ecosystem: npm
     directory: "/"
     schedule:
