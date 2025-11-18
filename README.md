@@ -13,6 +13,10 @@
 
 &nbsp;
 
-![screenshot of autocomplete suggestions based on the property](./demo/screenshot-1.png)
+https://github.com/user-attachments/assets/138574a3-1654-4eb9-aa94-7a940f651a51
+
+https://github.com/user-attachments/assets/2e2d996c-c65e-40db-abf1-2988e7ef499e
+
+https://github.com/user-attachments/assets/1fa12641-386e-4888-82bb-6b56446cfcdd
 
 Heavily inspired by [vscode-css-variables](https://github.com/vunguyentuan/vscode-css-variables) by [Vu Nguyen](https://github.com/vunguyentuan)
