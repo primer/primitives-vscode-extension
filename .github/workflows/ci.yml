@@ -22,3 +22,5 @@ jobs:
         run: npm run build
       - name: Run tests defined in vitest
         run: npm test
+      - name: Lint
+        run: npm run lint
