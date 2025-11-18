@@ -7,6 +7,7 @@ import functionalSizeCoarse from '@primer/primitives/dist/styleLint/functional/s
 import functionalSizeFine from '@primer/primitives/dist/styleLint/functional/size/size-fine.json'
 
 import functionalBorder from '@primer/primitives/dist/styleLint/functional/size/border.json'
+import functionalBreakpoints from '@primer/primitives/dist/styleLint/functional/size/breakpoints.json'
 
 import baseTypography from '@primer/primitives/dist/styleLint/base/typography/typography.json'
 import functionalTypography from '@primer/primitives/dist/styleLint/functional/typography/typography.json'
@@ -15,7 +16,6 @@ import lightTheme from '@primer/primitives/dist/styleLint/functional/themes/ligh
 import baseMotion from '@primer/primitives/dist/styleLint/base/motion/motion.json'
 
 // TODO: not used yet because it doesn't fit in propertiesMap
-// import functionalBreakpoints from '@primer/primitives/dist/styleLint/functional/size/breakpoints.json'
 // import functionalViewport from '@primer/primitives/dist/styleLint/functional/size/viewport.json'
 
 export type Suggestion =
@@ -69,7 +69,11 @@ export const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   gap: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['gap']}],
   margin: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['gap']}],
 
-  width: [{data: format(baseSize, 'size')}, {data: format(functionalSize, 'size'), match: ['width', 'minTarget']}],
+  width: [
+    {data: format(baseSize, 'size')},
+    {data: format(functionalSize, 'size'), match: ['width', 'minTarget']},
+    {data: format(functionalBreakpoints, 'size')},
+  ],
   height: [
     {data: format(baseSize, 'size')},
     {data: format(functionalSize, 'size'), match: ['height', 'size', 'minTarget', 'lineBoxHeight']},
