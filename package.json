@@ -47,7 +47,7 @@
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-plugin-github": "^5.1.8",
     "tsup": "^8.5.1",
-    "typescript": "^5.5.4",
+    "typescript": "5.5.4",
     "vitest": "^4.0.10",
     "vsce": "^2.10.2",
     "vscode-languageclient": "^9.0.1"
