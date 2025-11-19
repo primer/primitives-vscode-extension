@@ -116,8 +116,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
           : variable.kind === 'functional'
           ? CompletionItemKind.Field
           : CompletionItemKind.Constructor,
-      // sortText: variable.sortText
-      sortText: '---a',
+      sortText: variable.sortText,
       // this is slightly silly because what about multiple variables in one line
       // like shorthands or fallbacks
       insertText: currentLine.includes('var') ? variable.name : `var(${variable.name});`,
