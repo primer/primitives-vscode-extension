@@ -28,7 +28,7 @@
   },
   "prettier": "@github/prettier-config",
   "dependencies": {
-    "@primer/primitives": "^11.3.0",
+    "@primer/primitives": "^11.3.1",
     "csstype": "3.2.3",
     "lodash.camelcase": "^4.3.0",
     "lodash.flatten": "^4.4.0",
