@@ -17,6 +17,7 @@ import {isColor} from './utils/is-color'
 import {getSuggestions} from './suggestions'
 import {getCssVariable} from './utils/get-css-variable'
 import {getVariableInfo} from './utils/get-variable-info'
+import {getDocumentation} from './documentation'
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -103,6 +104,8 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
   const suggestedVariablesWithSortText = getSuggestions(property)
 
   const items = suggestedVariablesWithSortText.map(variable => {
+    const documentation = getDocumentation(variable.name)
+
     const item: CompletionItem = {
       label: variable.name,
       detail: String(variable.value),
@@ -111,14 +114,13 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
         typeof variable.value === 'string' && isColor(variable.value)
           ? CompletionItemKind.Color
           : variable.kind === 'functional'
-            ? CompletionItemKind.Field
-            : CompletionItemKind.Constructor,
-      // sortText: variable.sortText
-      sortText: '---a',
+          ? CompletionItemKind.Field
+          : CompletionItemKind.Constructor,
+      sortText: variable.sortText,
       // this is slightly silly because what about multiple variables in one line
       // like shorthands or fallbacks
       insertText: currentLine.includes('var') ? variable.name : `var(${variable.name});`,
-      documentation: `${variable.name} ${variable.value}`,
+      documentation: {kind: 'markdown', value: documentation},
     }
     return item
   })
@@ -145,33 +147,8 @@ connection.onHover(params => {
 
   if (!variableName) return null
 
-  const variableInfo = getVariableInfo(variableName)
-  if (!variableInfo) return null
-
-  let markdown = `**\`${variableInfo.name}\`**\n\n`
-  markdown += `\n---\n\n`
-
-  markdown += `- **Kind:** [${variableInfo.kind}](https://primer.style/product/primitives/token-names/#${variableInfo.kind})\n`
-  markdown += `- **Type:** ${variableInfo.type}\n`
-  markdown += `\n---\n\n`
-
-  if (variableInfo.themeValues && Object.keys(variableInfo.themeValues).length > 0) {
-    for (const [themeName, value] of Object.entries(variableInfo.themeValues)) {
-      markdown += `- **${themeName}:** \`${value}\`\n`
-    }
-  } else {
-    markdown += `**Value:** \`${variableInfo.value}\`\n\n`
-  }
-
-  markdown += `\n---\n\n`
-  markdown += `[View documentation](${variableInfo.docsUrl})\n`
-
-  return {
-    contents: {
-      kind: 'markdown',
-      value: markdown,
-    },
-  } as Hover
+  const documentation = getDocumentation(variableName)
+  return {contents: {kind: 'markdown', value: documentation}} as Hover
 })
 
 connection.onDefinition(params => {
