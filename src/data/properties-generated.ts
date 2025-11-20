@@ -1962,6 +1962,83 @@ export const propertiesMap: Record<string, Suggestion[]> = {
       "docsUrl": "https://primer.style/product/primitives/color?variable=--button-primary-borderColor-rest"
     },
     {
+      "name": "--buttonKeybindingHint-danger-borderColor-active",
+      "value": "#1f232826",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-borderColor-active"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-borderColor-disabled",
+      "value": "#818b981a",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-borderColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-borderColor-hover",
+      "value": "#1f232826",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-borderColor-hover"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-borderColor-rest",
+      "value": "#d1d9e0b3",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-borderColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-default-borderColor-disabled",
+      "value": "#818b981a",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-default-borderColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-default-borderColor-rest",
+      "value": "#d1d9e0b3",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-default-borderColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-inactive-borderColor",
+      "value": "#d1d9e0b3",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-inactive-borderColor"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-borderColor-disabled",
+      "value": "#818b981a",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-borderColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-borderColor-rest",
+      "value": "#ffffff00",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-borderColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-primary-borderColor-disabled",
+      "value": "#818b981a",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-primary-borderColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-primary-borderColor-rest",
+      "value": "#1f232826",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-primary-borderColor-rest"
+    },
+    {
       "name": "--contribution-default-borderColor-0",
       "value": "#1f23280d",
       "kind": "functional",
@@ -3198,6 +3275,83 @@ export const propertiesMap: Record<string, Suggestion[]> = {
       "kind": "functional",
       "type": "color",
       "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-outline-fgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-fgColor-active",
+      "value": "#ffffff",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-fgColor-active"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-fgColor-disabled",
+      "value": "#818b98",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-fgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-fgColor-hover",
+      "value": "#ffffff",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-fgColor-hover"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-fgColor-rest",
+      "value": "#59636e",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-fgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-default-fgColor-disabled",
+      "value": "#818b98",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-default-fgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-default-fgColor-rest",
+      "value": "#59636e",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-default-fgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-inactive-fgColor",
+      "value": "#59636e",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-inactive-fgColor"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-fgColor-disabled",
+      "value": "#818b98",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-fgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-fgColor-rest",
+      "value": "#59636e",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-fgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-primary-fgColor-disabled",
+      "value": "#ffffffcc",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-primary-fgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-primary-fgColor-rest",
+      "value": "#ffffff",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-primary-fgColor-rest"
     },
     {
       "name": "--codeMirror-cursor-fgColor",
@@ -4628,6 +4782,97 @@ export const propertiesMap: Record<string, Suggestion[]> = {
       "kind": "functional",
       "type": "color",
       "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-primary-bgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-bgColor-active",
+      "value": "#1f232866",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-bgColor-active"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-bgColor-disabled",
+      "value": "#eff2f5",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-bgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-bgColor-hover",
+      "value": "#1f232833",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-bgColor-hover"
+    },
+    {
+      "name": "--buttonKeybindingHint-danger-bgColor-rest",
+      "value": "#eff2f5",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-danger-bgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-default-bgColor-disabled",
+      "value": "#eff2f5",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-default-bgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-default-bgColor-rest",
+      "value": "#eff2f5",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-default-bgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-inactive-bgColor",
+      "value": "#eff2f5",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-inactive-bgColor"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-bgColor-active",
+      "value": "#818b9826",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-bgColor-active"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-bgColor-disabled",
+      "value": "#ffffff00",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-bgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-bgColor-hover",
+      "value": "#818b981a",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-bgColor-hover"
+    },
+    {
+      "name": "--buttonKeybindingHint-invisible-bgColor-rest",
+      "value": "#eff2f5",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-invisible-bgColor-rest"
+    },
+    {
+      "name": "--buttonKeybindingHint-primary-bgColor-disabled",
+      "value": "#002d111a",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-primary-bgColor-disabled"
+    },
+    {
+      "name": "--buttonKeybindingHint-primary-bgColor-rest",
+      "value": "#002d1133",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonKeybindingHint-primary-bgColor-rest"
     },
     {
       "name": "--card-bgColor",

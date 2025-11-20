@@ -58,7 +58,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
 
   try {
     ast = postcss.parse(currentLine)
-  } catch (error) {
+  } catch {
     // do nothing
   }
 
@@ -81,7 +81,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       } else if (params.position.character <= blockValuePositionEnd) {
         property = 'paddingBlock'
       }
-    } catch (error) {
+    } catch {
       // do nothing
     }
   } else if (property === 'border') {
@@ -96,7 +96,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
       } else if (params.position.character <= borderWidthPositionEnd) {
         property = 'borderWidth'
       }
-    } catch (error) {
+    } catch {
       // do nothing
     }
   }
