@@ -38,7 +38,7 @@ export type Suggestion = {
 } & (
   | {
       value: string
-      type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration'
+      type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration' | 'border'
     }
   | {
       value: number
