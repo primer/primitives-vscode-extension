@@ -3325,14 +3325,14 @@ export const propertiesMap: Record<string, Suggestion[]> = {
     },
     {
       "name": "--text-body-lineHeight-medium",
-      "value": 1.4285,
+      "value": 1.42857,
       "kind": "functional",
       "type": "number",
       "docsUrl": "https://primer.style/product/primitives/typography?variable=--text-body-lineHeight-medium"
     },
     {
       "name": "--text-body-lineHeight-small",
-      "value": 1.6666,
+      "value": 1.66667,
       "kind": "functional",
       "type": "number",
       "docsUrl": "https://primer.style/product/primitives/typography?variable=--text-body-lineHeight-small"
@@ -3427,14 +3427,14 @@ export const propertiesMap: Record<string, Suggestion[]> = {
     },
     {
       "name": "--text-body-shorthand-medium",
-      "value": "400 0.875rem,14px/1.4285 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+      "value": "400 0.875rem,14px/1.42857 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography",
       "docsUrl": "https://primer.style/product/primitives/typography?variable=--text-body-shorthand-medium"
     },
     {
       "name": "--text-body-shorthand-small",
-      "value": "400 0.75rem,12px/1.6666 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+      "value": "400 0.75rem,12px/1.66667 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       "kind": "functional",
       "type": "typography",
       "docsUrl": "https://primer.style/product/primitives/typography?variable=--text-body-shorthand-small"
