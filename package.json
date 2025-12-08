@@ -21,9 +21,9 @@
     "build": "npm run precompile && tsup src/index.ts src/language-server.ts --format cjs --external vscode --minify",
     "clean": "rm -rf dist",
     "lint": "eslint ./src --ext .ts --fix",
-    "vsce:publish": "@vscode/vsce publish",
+    "vsce:publish": "vsce publish",
     "test": "vitest",
-    "test:package": "@vscode/vsce package",
+    "test:package": "vsce package",
     "precompile": "npx ts-node src/data/precompile.ts"
   },
   "prettier": "@github/prettier-config",
