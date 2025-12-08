@@ -14,10 +14,11 @@ import postcss, {type Root as ASTRoot} from 'postcss'
 // import {properties, stories} from '@primer/primitives/dist/js/intellisense'
 import camelCase from 'lodash.camelcase'
 import {isColor} from './utils/is-color'
-import {getSuggestions} from './suggestions'
+import {getSuggestions, getSuggestionsLikeVariable, type SuggestionWithSortText} from './suggestions'
 import {getCssVariable} from './utils/get-css-variable'
 import {getVariableInfo} from './utils/get-variable-info'
 import {getDocumentation} from './documentation'
+import {getCurrentWord} from './utils/get-current-word'
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -67,12 +68,25 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
   let property: string = ast.nodes[0].type === 'decl' ? camelCase(ast.nodes[0].prop) : undefined
   if (!property) return []
 
+  const value: string =
+    ast.nodes[0].type === 'decl' ? ast.nodes[0].value.replace(');', '').replace('\n', '').trim() : undefined
+
+  const suggestedVariablesWithSortText: SuggestionWithSortText[] = []
+
+  // if the cursor is at the css variable, get getSuggestionsLikeVariable instead of getSuggestions(property)
+  const document = documents.get(params.textDocument.uri)
+  const offset = document.offsetAt(params.position)
+  const currentWord = getCurrentWord(document, offset)
+  if (currentWord.includes('--') && currentWord.length > 2 /* checking it's not just -- */) {
+    const variableSuggestions = getSuggestionsLikeVariable(currentWord.replace('--', ''))
+    suggestedVariablesWithSortText.push(...variableSuggestions)
+  }
+
   // TODO: for shorthands, property might be the second property like borderColor or paddingInline
   // we can be smarter about this
   if (property === 'padding') {
     try {
       // padding: block inline
-      const value = currentLine.split(':')[1].trim()
       const [blockValue] = value.split(' ')
       const blockValuePositionEnd = currentLine.indexOf(blockValue) + blockValue.length
 
@@ -87,7 +101,6 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
   } else if (property === 'border') {
     try {
       // border: width style color
-      const value = currentLine.split(':')[1].trim()
       const [borderWidth] = value.split(' ')
       const borderWidthPositionEnd = currentLine.indexOf(borderWidth) + borderWidth.length
 
@@ -101,7 +114,7 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
     }
   }
 
-  const suggestedVariablesWithSortText = getSuggestions(property)
+  suggestedVariablesWithSortText.push(...getSuggestions(property))
 
   const items = suggestedVariablesWithSortText.map(variable => {
     const documentation = getDocumentation(variable.name)
@@ -114,8 +127,8 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
         typeof variable.value === 'string' && isColor(variable.value)
           ? CompletionItemKind.Color
           : variable.kind === 'functional'
-          ? CompletionItemKind.Field
-          : CompletionItemKind.Constructor,
+            ? CompletionItemKind.Field
+            : CompletionItemKind.Constructor,
       sortText: variable.sortText,
       // this is slightly silly because what about multiple variables in one line
       // like shorthands or fallbacks

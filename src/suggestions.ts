@@ -4,7 +4,9 @@ import {propertiesMap, aliases, type Suggestion} from './data'
 // eslint-disable-next-line import/no-namespace
 import type * as CSS from 'csstype'
 
-export const getSuggestions = (property: keyof CSS.Properties) => {
+export type SuggestionWithSortText = Suggestion & {sortText: string}
+
+export const getSuggestions = (property: keyof CSS.Properties): SuggestionWithSortText[] => {
   // TODO: for shorthands, property might be the second property like borderColor or paddingInline
   // we can be smarter about this
   let suggestedVariables: Suggestion[]
@@ -24,6 +26,22 @@ export const getSuggestions = (property: keyof CSS.Properties) => {
 
   if (!suggestedVariables) return []
 
+  const suggestedVariablesWithSortText = sortSuggestions(suggestedVariables)
+  return suggestedVariablesWithSortText
+}
+
+// slower than getSuggestions, use judiciously
+export const getSuggestionsLikeVariable = (variableQuery: string): SuggestionWithSortText[] => {
+  const allVariables = flatten(Object.values(propertiesMap))
+  const suggestedVariables: Suggestion[] = allVariables.filter(variable => variable.name.includes(variableQuery))
+
+  if (!suggestedVariables) return []
+
+  const suggestedVariablesWithSortText = sortSuggestions(suggestedVariables)
+  return suggestedVariablesWithSortText
+}
+
+const sortSuggestions = (suggestedVariables: Suggestion[]): SuggestionWithSortText[] => {
   const functionalVariables = suggestedVariables.filter(variable => variable.kind === 'functional')
   const baseVariables = suggestedVariables.filter(variable => variable.kind === 'base')
 
@@ -35,6 +53,10 @@ export const getSuggestions = (property: keyof CSS.Properties) => {
   // TODO 2: contextual repetition
   // if there are other variables in the same block/document
   // we should take hints from them like hover state or control-small or button-primary
+
+  // TODO 3: for shorthands like outline and font, the shorthand token should come before
+  // the tokens for subproperties
+
   const suggestedVariablesWithSortText = [
     ...functionalVariables.map((variable, index) => {
       // we have to use alphabet instead of numbers to sort because it uses text
