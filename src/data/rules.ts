@@ -25,7 +25,7 @@ export type Suggestion = {
 } & (
   | {
       value: string
-      type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration'
+      type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration' | 'border'
     }
   | {
       value: number
@@ -81,11 +81,16 @@ export const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   borderWidth: [{data: format(functionalBorder, 'size'), match: ['borderWidth']}],
   borderRadius: [{data: format(functionalBorder, 'size'), match: ['borderRadius']}],
   borderColor: [{data: format(lightTheme, 'color'), match: ['borderColor']}],
-  boxShadow: [{data: format(functionalBorder, 'size'), match: ['boxShadow']}],
+  boxShadow: [
+    {data: format(functionalBorder, 'size'), match: ['boxShadow']},
+    {data: format(lightTheme, 'color'), match: ['shadow']},
+  ],
+  border: [{data: format(lightTheme, 'color'), match: ['border-']}],
 
   outlineWidth: [{data: format(functionalBorder, 'size'), match: ['outline-focus-width']}],
   outlineOffset: [{data: format(functionalBorder, 'size'), match: ['outline-focus-offset']}],
   outlineColor: [{data: format(lightTheme, 'color'), match: ['outlineColor']}],
+  outline: [{data: format(lightTheme, 'color'), match: ['focus-outline', 'outline']}],
 
   fontWeight: [
     {data: format(baseTypography, 'typography'), match: ['weight']},

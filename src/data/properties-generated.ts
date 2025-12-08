@@ -8,7 +8,7 @@ export type Suggestion = {
 } & (
   | {
       value: string
-      type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration'
+      type: 'dimension' | 'color' | 'string' | 'fontFamily' | 'typography' | 'duration' | 'border'
     }
   | {
       value: number
@@ -2690,6 +2690,295 @@ export const propertiesMap: Record<string, Suggestion[]> = {
       "kind": "functional",
       "type": "string",
       "docsUrl": "https://primer.style/product/primitives/size?variable=--boxShadow-thin"
+    },
+    {
+      "name": "--avatar-shadow",
+      "value": "0px 0px 0px 2px #ffffffcc",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--avatar-shadow"
+    },
+    {
+      "name": "--button-danger-shadow-selected",
+      "value": "inset 0px 1px 0px 0px #4c001433",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-danger-shadow-selected"
+    },
+    {
+      "name": "--button-default-shadow-resting",
+      "value": "0px 1px 0px 0px #1f23280a",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-default-shadow-resting"
+    },
+    {
+      "name": "--button-outline-shadow-selected",
+      "value": "inset 0px 1px 0px 0px #00215533",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-shadow-selected"
+    },
+    {
+      "name": "--button-primary-shadow-selected",
+      "value": "inset 0px 1px 0px 0px #002d114d",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-primary-shadow-selected"
+    },
+    {
+      "name": "--shadow-floating-large",
+      "value": "0px 0px 0px 1px #d1d9e0, 0px 40px 80px 0px #25292e3d",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-floating-large"
+    },
+    {
+      "name": "--shadow-floating-legacy",
+      "value": "0px 6px 12px -3px #25292e0a, 0px 6px 18px 0px #25292e1f",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-floating-legacy"
+    },
+    {
+      "name": "--shadow-floating-medium",
+      "value": "0px 0px 0px 1px #d1d9e0, 0px 8px 16px -4px #25292e14, 0px 4px 32px -4px #25292e14, 0px 24px 48px -12px #25292e14, 0px 48px 96px -24px #25292e14",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-floating-medium"
+    },
+    {
+      "name": "--shadow-floating-small",
+      "value": "0px 0px 0px 1px #d1d9e080, 0px 6px 12px -3px #25292e0a, 0px 6px 18px 0px #25292e1f",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-floating-small"
+    },
+    {
+      "name": "--shadow-floating-xlarge",
+      "value": "0px 0px 0px 1px #d1d9e0, 0px 56px 112px 0px #25292e52",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-floating-xlarge"
+    },
+    {
+      "name": "--shadow-inset",
+      "value": "inset 0px 1px 0px 0px #1f23280a",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-inset"
+    },
+    {
+      "name": "--shadow-resting-medium",
+      "value": "0px 1px 1px 0px #25292e1a, 0px 3px 6px 0px #25292e1f",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-resting-medium"
+    },
+    {
+      "name": "--shadow-resting-small",
+      "value": "0px 1px 1px 0px #1f23280f, 0px 1px 3px 0px #1f23280f",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-resting-small"
+    },
+    {
+      "name": "--shadow-resting-xsmall",
+      "value": "0px 1px 1px 0px #1f23280f",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--shadow-resting-xsmall"
+    }
+  ],
+  "border": [
+    {
+      "name": "--border-accent-emphasis",
+      "value": "0.00390625rem,0.0625px solid #0969da",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-accent-emphasis"
+    },
+    {
+      "name": "--border-accent-muted",
+      "value": "0.00390625rem,0.0625px solid #54aeff66",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-accent-muted"
+    },
+    {
+      "name": "--border-attention-emphasis",
+      "value": "0.00390625rem,0.0625px solid #9a6700",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-attention-emphasis"
+    },
+    {
+      "name": "--border-attention-muted",
+      "value": "0.00390625rem,0.0625px solid #d4a72c66",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-attention-muted"
+    },
+    {
+      "name": "--border-closed-emphasis",
+      "value": "0.00390625rem,0.0625px solid #cf222e",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-closed-emphasis"
+    },
+    {
+      "name": "--border-closed-muted",
+      "value": "0.00390625rem,0.0625px solid #ff818266",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-closed-muted"
+    },
+    {
+      "name": "--border-danger-emphasis",
+      "value": "0.00390625rem,0.0625px solid #cf222e",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-danger-emphasis"
+    },
+    {
+      "name": "--border-danger-muted",
+      "value": "0.00390625rem,0.0625px solid #ff818266",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-danger-muted"
+    },
+    {
+      "name": "--border-default",
+      "value": "0.00390625rem,0.0625px solid #d1d9e0",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-default"
+    },
+    {
+      "name": "--border-disabled",
+      "value": "0.00390625rem,0.0625px solid #818b981a",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-disabled"
+    },
+    {
+      "name": "--border-done-emphasis",
+      "value": "0.00390625rem,0.0625px solid #8250df",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-done-emphasis"
+    },
+    {
+      "name": "--border-done-muted",
+      "value": "0.00390625rem,0.0625px solid #c297ff66",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-done-muted"
+    },
+    {
+      "name": "--border-emphasis",
+      "value": "0.00390625rem,0.0625px solid #818b98",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-emphasis"
+    },
+    {
+      "name": "--border-muted",
+      "value": "0.00390625rem,0.0625px solid #d1d9e0b3",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-muted"
+    },
+    {
+      "name": "--border-neutral-emphasis",
+      "value": "0.00390625rem,0.0625px solid #59636e",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-neutral-emphasis"
+    },
+    {
+      "name": "--border-neutral-muted",
+      "value": "0.00390625rem,0.0625px solid #d1d9e0b3",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-neutral-muted"
+    },
+    {
+      "name": "--border-open-emphasis",
+      "value": "0.00390625rem,0.0625px solid #1a7f37",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-open-emphasis"
+    },
+    {
+      "name": "--border-open-muted",
+      "value": "0.00390625rem,0.0625px solid #4ac26b66",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-open-muted"
+    },
+    {
+      "name": "--border-severe-emphasis",
+      "value": "0.00390625rem,0.0625px solid #bc4c00",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-severe-emphasis"
+    },
+    {
+      "name": "--border-severe-muted",
+      "value": "0.00390625rem,0.0625px solid #fb8f4466",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-severe-muted"
+    },
+    {
+      "name": "--border-sponsors-emphasis",
+      "value": "0.00390625rem,0.0625px solid #bf3989",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-sponsors-emphasis"
+    },
+    {
+      "name": "--border-sponsors-muted",
+      "value": "0.00390625rem,0.0625px solid #ff80c866",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-sponsors-muted"
+    },
+    {
+      "name": "--border-success-emphasis",
+      "value": "0.00390625rem,0.0625px solid #1a7f37",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-success-emphasis"
+    },
+    {
+      "name": "--border-success-muted",
+      "value": "0.00390625rem,0.0625px solid #4ac26b66",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-success-muted"
+    },
+    {
+      "name": "--border-transparent",
+      "value": "0.00390625rem,0.0625px solid #ffffff00",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-transparent"
+    },
+    {
+      "name": "--border-upsell-emphasis",
+      "value": "0.00390625rem,0.0625px solid #8250df",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-upsell-emphasis"
+    },
+    {
+      "name": "--border-upsell-muted",
+      "value": "0.00390625rem,0.0625px solid #c297ff66",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--border-upsell-muted"
     }
   ],
   "outlineWidth": [
@@ -2711,6 +3000,141 @@ export const propertiesMap: Record<string, Suggestion[]> = {
     }
   ],
   "outlineColor": [
+    {
+      "name": "--focus-outlineColor",
+      "value": "#0969da",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--focus-outlineColor"
+    }
+  ],
+  "outline": [
+    {
+      "name": "--button-outline-bgColor-active",
+      "value": "#0757ba",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-bgColor-active"
+    },
+    {
+      "name": "--button-outline-bgColor-disabled",
+      "value": "#eff2f5",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-bgColor-disabled"
+    },
+    {
+      "name": "--button-outline-bgColor-hover",
+      "value": "#0969da",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-bgColor-hover"
+    },
+    {
+      "name": "--button-outline-bgColor-rest",
+      "value": "#f6f8fa",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-bgColor-rest"
+    },
+    {
+      "name": "--button-outline-borderColor-active",
+      "value": "#1f232826",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-borderColor-active"
+    },
+    {
+      "name": "--button-outline-borderColor-hover",
+      "value": "#1f232826",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-borderColor-hover"
+    },
+    {
+      "name": "--button-outline-fgColor-active",
+      "value": "#ffffff",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-fgColor-active"
+    },
+    {
+      "name": "--button-outline-fgColor-disabled",
+      "value": "#0969da80",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-fgColor-disabled"
+    },
+    {
+      "name": "--button-outline-fgColor-hover",
+      "value": "#ffffff",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-fgColor-hover"
+    },
+    {
+      "name": "--button-outline-fgColor-rest",
+      "value": "#0969da",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-fgColor-rest"
+    },
+    {
+      "name": "--button-outline-shadow-selected",
+      "value": "inset 0px 1px 0px 0px #00215533",
+      "kind": "functional",
+      "type": "shadow",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--button-outline-shadow-selected"
+    },
+    {
+      "name": "--buttonCounter-outline-bgColor-disabled",
+      "value": "#0969da0d",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-outline-bgColor-disabled"
+    },
+    {
+      "name": "--buttonCounter-outline-bgColor-hover",
+      "value": "#ffffff33",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-outline-bgColor-hover"
+    },
+    {
+      "name": "--buttonCounter-outline-bgColor-rest",
+      "value": "#0969da1a",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-outline-bgColor-rest"
+    },
+    {
+      "name": "--buttonCounter-outline-fgColor-disabled",
+      "value": "#0969da80",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-outline-fgColor-disabled"
+    },
+    {
+      "name": "--buttonCounter-outline-fgColor-hover",
+      "value": "#ffffff",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-outline-fgColor-hover"
+    },
+    {
+      "name": "--buttonCounter-outline-fgColor-rest",
+      "value": "#0550ae",
+      "kind": "functional",
+      "type": "color",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--buttonCounter-outline-fgColor-rest"
+    },
+    {
+      "name": "--focus-outline",
+      "value": "2px solid #0969da",
+      "kind": "functional",
+      "type": "border",
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--focus-outline"
+    },
     {
       "name": "--focus-outlineColor",
       "value": "#0969da",
