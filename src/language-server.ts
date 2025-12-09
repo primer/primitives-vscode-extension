@@ -74,9 +74,8 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
   const suggestedVariablesWithSortText: SuggestionWithSortText[] = []
 
   // if the cursor is at the css variable, get getSuggestionsLikeVariable instead of getSuggestions(property)
-  const document = documents.get(params.textDocument.uri)
-  const offset = document.offsetAt(params.position)
-  const currentWord = getCurrentWord(document, offset)
+  const offset = doc.offsetAt(params.position)
+  const currentWord = getCurrentWord(doc, offset)
   if (currentWord.includes('--') && currentWord.length > 2 /* checking it's not just -- */) {
     const variableSuggestions = getSuggestionsLikeVariable(currentWord.replace('--', ''))
     suggestedVariablesWithSortText.push(...variableSuggestions)
