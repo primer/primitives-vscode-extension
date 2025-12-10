@@ -16,7 +16,6 @@ import camelCase from 'lodash.camelcase'
 import {isColor} from './utils/is-color'
 import {getSuggestions, getSuggestionsLikeVariable, type SuggestionWithSortText} from './suggestions'
 import {getCssVariable} from './utils/get-css-variable'
-import {getVariableInfo} from './utils/get-variable-info'
 import {getDocumentation} from './documentation'
 import {getCurrentWord} from './utils/get-current-word'
 
@@ -34,7 +33,6 @@ connection.onInitialize(async () => {
       completionProvider: {resolveProvider: true, triggerCharacters: [':']},
       hoverProvider: true,
       textDocumentSync: TextDocumentSyncKind.Incremental,
-      definitionProvider: true,
     },
   }
 
@@ -161,21 +159,6 @@ connection.onHover(params => {
 
   const documentation = getDocumentation(variableName)
   return {contents: {kind: 'markdown', value: documentation}} as Hover
-})
-
-connection.onDefinition(params => {
-  const doc = documents.get(params.textDocument.uri)
-  if (!doc) return null
-
-  const offset = doc.offsetAt(params.position)
-  const variableName = getCssVariable(doc, offset)
-  if (!variableName) return null
-
-  const variableInfo = getVariableInfo(variableName)
-  if (!variableInfo) return null
-
-  connection.sendRequest('open-docs', {variable: variableInfo})
-  return null
 })
 
 // Make the text document manager listen on the connection

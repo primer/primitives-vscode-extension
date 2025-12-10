@@ -1,6 +1,7 @@
-import {TextDocument} from 'vscode-languageserver-textdocument'
+import {TextDocument as LanguageServerTextDocument} from 'vscode-languageserver-textdocument'
+import {TextDocument as VSCodeTextDocument} from 'vscode'
 
-export function getCurrentWord(document: TextDocument, offset: number): string {
+export function getCurrentWord(document: LanguageServerTextDocument | VSCodeTextDocument, offset: number): string {
   const text = document.getText()
   const delimiters = ' \t\n\r":{[()]},*>+'
 

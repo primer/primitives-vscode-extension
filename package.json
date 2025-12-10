@@ -12,6 +12,23 @@
   "activationEvents": [
     "onStartupFinished"
   ],
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "command": "primer-primitives-autocomplete.openDocs",
+          "group": "navigation@100",
+          "when": "editorTextFocus && editorHasHoverProvider"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "primer-primitives-autocomplete.openDocs",
+        "title": "Open Primer documentation for variable"
+      }
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/primer/primitives-vscode-extension.git"
