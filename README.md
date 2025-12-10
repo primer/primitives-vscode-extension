@@ -27,11 +27,11 @@ Hover over a variable to see its value. Or values in the case of colors across d
 
 ![Hover preview](https://raw.githubusercontent.com/primer/primitives-vscode-extension/refs/heads/main/.github/content/hover.gif)
 
-## Go to definition in Docs
+## Open documentation for variable
 
-Right click -> `Go to definition` to open documentation in a preview within VSCode.
+Right click -> `Open Primer documentation for variable` to open documentation in a preview within VSCode.
 
-![Open definition in docs](https://raw.githubusercontent.com/primer/primitives-vscode-extension/refs/heads/main/.github/content/definition.gif)
+![Open documentation for variable](https://raw.githubusercontent.com/primer/primitives-vscode-extension/refs/heads/main/.github/content/documentation.gif)
 
 &nbsp;
 
