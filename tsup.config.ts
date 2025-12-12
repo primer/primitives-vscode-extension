@@ -5,8 +5,14 @@ export default defineConfig({
   format: ['cjs'],
   external: ['vscode'],
   minify: true,
-  noExternal: [/@primer\/primitives/, /lodash/, /postcss/, /vscode-languageserver/, /vscode-languageserver-textdocument/],
+  // Bundle all dependencies to avoid requiring node_modules at runtime
+  noExternal: [
+    '@primer/primitives',
+    /^lodash\./,
+    'postcss',
+    /^vscode-languageserver/,
+  ],
   bundle: true,
   treeshake: true,
-  splitting: false, // VSCode extensions don't support ESM code splitting well
+  splitting: false, // Code splitting disabled for CommonJS VSCode extension compatibility
 })
