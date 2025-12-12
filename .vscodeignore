@@ -3,6 +3,7 @@
 
 src/**
 demo/*
+node_modules/**
 
 .eslintrc.js
 .gitignore
@@ -10,6 +11,7 @@ demo/*
 .prettierignore
 package-lock.json
 tsconfig.json
+tsup.config.ts
 **.md
 
 
