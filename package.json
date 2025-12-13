@@ -35,7 +35,7 @@
   },
   "main": "./dist/index.js",
   "scripts": {
-    "build": "npm run precompile && tsup src/index.ts src/language-server.ts --format cjs --external vscode --minify",
+    "build": "npm run precompile && tsup",
     "clean": "rm -rf dist",
     "lint": "eslint ./src --ext .ts --fix",
     "vsce:publish": "vsce publish",
@@ -44,16 +44,10 @@
     "precompile": "npx ts-node src/data/precompile.ts"
   },
   "prettier": "@github/prettier-config",
-  "dependencies": {
-    "@primer/primitives": "^11.3.1",
-    "csstype": "3.2.3",
-    "lodash.camelcase": "^4.3.0",
-    "lodash.flatten": "^4.4.0",
-    "vscode-languageserver": "9.0.1",
-    "vscode-languageserver-textdocument": "1.0.12"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@github/prettier-config": "^0.0.6",
+    "@primer/primitives": "^11.3.1",
     "@types/lodash.flatten": "^4.4.9",
     "@types/node": "^24.0.0",
     "@types/vscode": "^1.79.0",
@@ -61,12 +55,17 @@
     "@typescript-eslint/parser": "8.47.0",
     "@vscode/test-electron": "2.5.2",
     "@vscode/vsce": "3.7.0",
+    "csstype": "3.2.3",
     "eslint": "8.57.1",
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-plugin-github": "5.1.2",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.flatten": "^4.4.0",
     "tsup": "8.5.1",
     "typescript": "5.9.3",
     "vitest": "4.0.10",
-    "vscode-languageclient": "9.0.1"
+    "vscode-languageclient": "9.0.1",
+    "vscode-languageserver": "9.0.1",
+    "vscode-languageserver-textdocument": "1.0.12"
   }
 }
