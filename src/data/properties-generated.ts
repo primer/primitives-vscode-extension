@@ -2983,29 +2983,29 @@ export const propertiesMap: Record<string, Suggestion[]> = {
   ],
   "outlineWidth": [
     {
-      "name": "--outline-focus-width",
+      "name": "--focus-outline-width",
       "value": "0.125rem",
       "kind": "functional",
       "type": "dimension",
-      "docsUrl": "https://primer.style/product/primitives/size?variable=--outline-focus-width"
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--focus-outline-width"
     }
   ],
   "outlineOffset": [
     {
-      "name": "--outline-focus-offset",
+      "name": "--focus-outline-offset",
       "value": "-0.125rem",
       "kind": "functional",
       "type": "dimension",
-      "docsUrl": "https://primer.style/product/primitives/size?variable=--outline-focus-offset"
+      "docsUrl": "https://primer.style/product/primitives/size?variable=--focus-outline-offset"
     }
   ],
   "outlineColor": [
     {
-      "name": "--focus-outlineColor",
+      "name": "--focus-outline-color",
       "value": "#0969da",
       "kind": "functional",
       "type": "color",
-      "docsUrl": "https://primer.style/product/primitives/color?variable=--focus-outlineColor"
+      "docsUrl": "https://primer.style/product/primitives/color?variable=--focus-outline-color"
     }
   ],
   "outline": [

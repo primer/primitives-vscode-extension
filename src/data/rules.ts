@@ -87,9 +87,9 @@ export const propertiesRules: Partial<Record<keyof CSS.Properties, Rule[]>> = {
   ],
   border: [{data: format(lightTheme, 'color'), match: ['border-']}],
 
-  outlineWidth: [{data: format(functionalBorder, 'size'), match: ['outline-focus-width']}],
-  outlineOffset: [{data: format(functionalBorder, 'size'), match: ['outline-focus-offset']}],
-  outlineColor: [{data: format(lightTheme, 'color'), match: ['outlineColor']}],
+  outlineWidth: [{data: format(functionalBorder, 'size'), match: ['focus-outline-width', 'outline-focus-width']}],
+  outlineOffset: [{data: format(functionalBorder, 'size'), match: ['focus-outline-offset', 'outline-focus-offset']}],
+  outlineColor: [{data: format(lightTheme, 'color'), match: ['focus-outline-color', 'outlineColor']}],
   outline: [{data: format(lightTheme, 'color'), match: ['focus-outline', 'outline']}],
 
   fontWeight: [
